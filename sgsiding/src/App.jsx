@@ -1,14 +1,15 @@
-import React from "react";
 import "./App.css";
 import { Button } from "./components/ui/button";
-// import { NavbarWithMegaMenu } from "./components/ui/Navbar";
 import Navbar from "./components/ui/Navbar";
+import Siding from "./components/ui/Siding";
 
 function App() {
   return (
     <>
       <Navbar />
-      {/* <NavbarWithMegaMenu /> */}
+      <div>
+        <Siding />
+      </div>
       <Button onClick={() => console.log("Clicked")}>Click me</Button>
     </>
   );
