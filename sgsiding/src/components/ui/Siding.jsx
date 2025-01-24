@@ -5,6 +5,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "./carousel";
+import "../styles/Siding.css";
 
 export default function Siding() {
   const slides = [
@@ -20,18 +21,20 @@ export default function Siding() {
   ];
 
   return (
-    <Carousel className="w-full max-w-5xl mx-auto">
-      <CarouselContent>
-        {slides.map((slide) => (
-          <CarouselSlide
-            key={slide.id}
-            slide={slide}
-          />
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <div className="carousel-items">
+      <Carousel className="w-full max-w-5xl mx-auto">
+        <CarouselContent>
+          {slides.map((slide) => (
+            <CarouselSlide
+              key={slide.id}
+              slide={slide}
+            />
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
   );
 }
 
