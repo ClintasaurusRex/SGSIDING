@@ -1,8 +1,26 @@
 #root {
-  margin: 0 auto;
+  /* max-width: 1920px; */
+  width: 100%;
+  /* margin: 0 auto; */
   text-align: center;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background: linear-gradient(to bottom, #444445, #399ae0);
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1920px) {
+  #root {
+    height: 1200px;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  #root {
+    height: 100vh;
+    padding: 0 1rem;
+  }
 }
