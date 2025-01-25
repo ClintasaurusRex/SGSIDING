@@ -1,7 +1,7 @@
 #root {
-  /* max-width: 1920px; */
+  max-width: 1920px;
   width: 100%;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   text-align: center;
   min-height: 100vh;
   position: relative;
@@ -11,16 +11,18 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 1920px) {
-  #root {
-    height: 1200px;
-    padding: 0 2rem;
-  }
-}
-
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 1366px) {
   #root {
     height: 100vh;
     padding: 0 1rem;
+    font-size: 14px;
+    zoom: 0.9;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #root {
+    zoom: 0.85;
+    padding: 0 0.75rem;
   }
 }

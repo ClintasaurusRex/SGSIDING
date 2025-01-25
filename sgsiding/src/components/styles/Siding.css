@@ -15,14 +15,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 100%;
 }
+
 .text-content {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   width: 50%;
-  padding: 10px;
+  /* padding: 10px; */
   font-size: larger;
-  padding-left: 10.1rem;
+  /* margin-left: 10.1rem; */
   flex-direction: column;
 }
 
@@ -32,15 +34,41 @@
   gap: 10px;
   padding: 5px;
 }
-@media (max-width: 768px) {
+
+/* Add these new media queries for 13" laptop screens */
+@media screen and (max-width: 1366px) {
+  .main-container {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .text-content {
+    padding-left: 2rem;
+    font-size: medium;
+    width: 110%;
+  }
+
+  .service-contact {
+    flex-direction: row;
+    gap: 5px;
+  }
+
   .-left-12 {
-    left: 2%;
+    left: 20%;
   }
   .-right-12 {
-    right: 2%;
+    right: 20%;
   }
 }
-@media (max-width: 1280px) {
+
+/* For even smaller widths */
+@media screen and (max-width: 1280px) {
+  .text-content {
+    padding-left: 1rem;
+    width: 40%;
+  }
+
   .-left-12 {
     left: 19%;
   }
@@ -48,13 +76,13 @@
     right: 19%;
   }
 }
-/* 11-inch laptops (1366x768) */
-@media screen and (max-width: 1366px) {
+
+@media (max-width: 768px) {
   .-left-12 {
-    left: 20%;
+    left: 2%;
   }
   .-right-12 {
-    right: 20%;
+    right: 2%;
   }
 }
 /* 13-inch laptops (1920x1080) */
