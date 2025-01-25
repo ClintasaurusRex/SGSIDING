@@ -1,13 +1,13 @@
 export const slides = [
-  { id: 1, src: "../public/assets/sgsiding2.jpeg", alt: "Slide 2" },
-  { id: 2, src: "../public/assets/sgsiding.jpeg", alt: "Slide 1" },
-  { id: 3, src: "../public/assets/sgsiding3.jpeg", alt: "Slide 3" },
-  { id: 4, src: "../public/assets/sgsiding4.jpeg", alt: "Slide 3" },
-  { id: 5, src: "../public/assets/sgsiding5.jpeg", alt: "Slide 3" },
-  { id: 6, src: "../public/assets/sgsiding6.jpeg", alt: "Slide 3" },
-  { id: 7, src: "../public/assets/sgsiding7.jpeg", alt: "Slide 3" },
-  { id: 8, src: "../public/assets/sgsiding8.jpeg", alt: "Slide 3" },
-  { id: 9, src: "../public/assets/sgsiding9.jpeg", alt: "Slide 3" },
+  { id: 1, src: "/assets/sgsiding2.jpeg", alt: "Slide 2" },
+  { id: 2, src: "/assets/sgsiding.jpeg", alt: "Slide 1" },
+  { id: 3, src: "/assets/sgsiding3.jpeg", alt: "Slide 3" },
+  { id: 4, src: "/assets/sgsiding4.jpeg", alt: "Slide 3" },
+  { id: 5, src: "/assets/sgsiding5.jpeg", alt: "Slide 3" },
+  { id: 6, src: "/assets/sgsiding6.jpeg", alt: "Slide 3" },
+  { id: 7, src: "/assets/sgsiding7.jpeg", alt: "Slide 3" },
+  { id: 8, src: "/assets/sgsiding8.jpeg", alt: "Slide 3" },
+  { id: 9, src: "/assets/sgsiding9.jpeg", alt: "Slide 3" },
 ];
 
 export const intro =

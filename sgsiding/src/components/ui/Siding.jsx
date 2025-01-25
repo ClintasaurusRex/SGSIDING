@@ -1,6 +1,6 @@
 import { Button } from "./button";
 import "../styles/Siding.css";
-import { slides, intro } from "../../../public/sidingImages";
+import { slides, intro } from "../../assets/sidingImages";
 
 import {
   Carousel,
