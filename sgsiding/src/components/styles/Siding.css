@@ -23,8 +23,15 @@
   padding: 10px;
   font-size: larger;
   padding-left: 10.1rem;
+  flex-direction: column;
 }
 
+.service-contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px;
+}
 @media (max-width: 768px) {
   .-left-12 {
     left: 2%;
