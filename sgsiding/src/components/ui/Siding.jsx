@@ -20,20 +20,12 @@ export default function Siding() {
     { id: 8, src: "../public/assets/sgsiding9.jpeg", alt: "Slide 3" },
   ];
 
+  const intro =
+    "At Sg-Siding, we specialize in delivering top-notch siding services designed to protect and beautify your home or commercial property. With years of experience in the industry, our team is committed to providing exceptional craftsmanship, durable materials, and personalized service to meet your unique needs. \nWhether you're looking to enhance curb appeal, improve energy efficiency, or safeguard your property against the elements, we’re here to bring your vision to life. From consultation to installation, our process is seamless, reliable, and tailored to exceed your expectations.";
+
   return (
     <main className="main-container">
-      <span className="text-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore modi
-        dolor, consequatur neque sunt vero? Sed architecto labore officiis
-        doloremque odit! Quas exercitationem sed distinctio molestiae at quam
-        enim nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Odio accusantium dolorum reiciendis expedita ullam hic. Sequi molestias
-        cum accusantium dolor officiis minima explicabo. Dolorum, distinctio
-        aut? Praesentium modi nisi alias. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Repellat repellendus sequi quia facere nam ratione
-        unde culpa deleniti impedit placeat, sit exercitationem facilis
-        perspiciatis porro consequuntur dolore eos numquam minus!
-      </span>
+      <span className="text-content">{intro}</span>
       <div className="carousel-items">
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
