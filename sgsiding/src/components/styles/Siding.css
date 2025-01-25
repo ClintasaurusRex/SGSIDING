@@ -14,10 +14,14 @@
 .main-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .text-content {
+  display: flex;
+  align-items: flex-start;
   width: 50%;
 }
+
 @media (max-width: 768px) {
   .-left-12 {
     left: 2%;
@@ -34,3 +38,50 @@
     right: 19%;
   }
 }
+/* 11-inch laptops (1366x768) */
+@media screen and (max-width: 1366px) {
+  .-left-12 {
+    left: 20%;
+  }
+  .-right-12 {
+    right: 20%;
+  }
+}
+/* 13-inch laptops (1920x1080) */
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  .-left-12 {
+    left: 24%;
+  }
+  .-right-12 {
+    right: 24%;
+  }
+}
+/* 15-16 inch laptops (2560x1440) */
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+  .-left-12 {
+    left: 25%;
+  }
+  .-right-25 {
+    right: 25%;
+  }
+}
+/* 17-inch and larger (3840x2160) */
+@media screen and (min-width: 2561px) {
+  .-left-12 {
+    left: 26%;
+  }
+  .-right-12 {
+    right: 26%;
+  }
+}
+/* Laptops and larger screens */
+/* @media screen and (min-width: 1281px) and (max-width: 1366px),
+  and (min-width: 1367px) and (max-width: 1920px),
+  and (min-width: 1921px) and (max-width: 2560px),
+  / and (min-width: 2561px) {
+  .-left-12,
+  .-right-12 {
+    left: clamp(20%, calc(20% + (viewport-width - 1281px) * 0.002), 26%);
+    right: clamp(20%, calc(20% + (viewport-width - 1281px) * 0.002), 26%);
+  }
+} */
