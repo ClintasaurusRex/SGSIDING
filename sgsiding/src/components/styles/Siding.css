@@ -2,8 +2,35 @@
   margin-top: 100px;
 }
 .-left-12 {
-  left: 15rem;
+  left: 25%;
+  transform: translateX(-50%);
 }
+
 .-right-12 {
-  right: 15rem;
+  right: 25%;
+  transform: translateX(50%);
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
+.text-content {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .-left-12 {
+    left: 2%;
+  }
+  .-right-12 {
+    right: 2%;
+  }
+}
+@media (max-width: 1280px) {
+  .-left-12 {
+    left: 19%;
+  }
+  .-right-12 {
+    right: 19%;
+  }
 }
