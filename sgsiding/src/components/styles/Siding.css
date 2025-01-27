@@ -13,6 +13,7 @@
 
 .main-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   max-width: 100%;
