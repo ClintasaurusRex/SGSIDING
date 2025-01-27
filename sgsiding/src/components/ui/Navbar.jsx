@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"; // Utility from ShadCN for conditional classna
 // import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import NavBarItems from "../NavBarItems";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,34 +15,8 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="text-lg font-bold text-primary">Siding Business</div>
-
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          <a
-            href="#home"
-            className={cn("text-sm font-medium text-muted hover:text-primary")}
-          >
-            Home
-          </a>
-          <a
-            href="#services"
-            className={cn("text-sm font-medium text-muted hover:text-primary")}
-          >
-            Services
-          </a>
-          <a
-            href="#about"
-            className={cn("text-sm font-medium text-muted hover:text-primary")}
-          >
-            About Us
-          </a>
-          <a
-            href="#contact"
-            className={cn("text-sm font-medium text-muted hover:text-primary")}
-          >
-            Contact
-          </a>
-        </nav>
+        <NavBarItems />
 
         {/* Mobile Menu Button */}
         <button
