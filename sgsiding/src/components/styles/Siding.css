@@ -35,45 +35,48 @@
   padding: 5px;
 }
 
-/* Add these new media queries for 13" laptop screens */
+/* Base styles for 13" screens (typically 1280x800 or 1366x768) */
 @media screen and (max-width: 1366px) {
   .main-container {
     flex-direction: row;
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    max-width: 100%;
   }
 
   .text-content {
-    padding-left: 2rem;
-    font-size: medium;
-    width: 110%;
-  }
-
-  .service-contact {
-    flex-direction: row;
-    gap: 5px;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 0.95rem;
   }
 
   .-left-12 {
-    left: 20%;
+    left: 22%;
   }
+
   .-right-12 {
-    right: 20%;
+    right: 22%;
   }
 }
 
-/* For even smaller widths */
-@media screen and (max-width: 1280px) {
+/* 16" screen styles (typically 1920x1080) */
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  .main-container {
+    gap: 2rem;
+    padding: 0 3rem;
+  }
+
   .text-content {
-    padding-left: 1rem;
-    width: 40%;
+    width: 100%;
+    font-size: 1rem;
   }
 
   .-left-12 {
-    left: 19%;
+    left: 24%;
   }
+
   .-right-12 {
-    right: 19%;
+    right: 24%;
   }
 }
 
@@ -84,17 +87,7 @@
   .-right-12 {
     right: 2%;
   }
-}
-/* 13-inch laptops (1920x1080) */
-@media screen and (min-width: 1367px) and (max-width: 1920px) {
-  .-left-12 {
-    left: 24%;
-  }
-  .-right-12 {
-    right: 24%;
-  }
-}
-/* 15-16 inch laptops (2560x1440) */
+} /* 15-16 inch laptops (2560x1440) */
 @media screen and (min-width: 1921px) and (max-width: 2560px) {
   .-left-12 {
     left: 25%;
