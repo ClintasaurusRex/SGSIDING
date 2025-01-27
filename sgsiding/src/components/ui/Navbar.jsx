@@ -31,38 +31,38 @@ const Navbar = () => {
         {menuOpen && (
           <nav className="absolute top-16 left-0 w-full bg-white shadow-md border-t md:hidden">
             <div className="flex flex-col items-center space-y-4 p-4">
-              <a
+              <Link
                 href="#home"
                 className={cn(
                   "text-sm font-medium text-muted hover:text-primary"
                 )}
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#services"
                 className={cn(
                   "text-sm font-medium text-muted hover:text-primary"
                 )}
               >
                 Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#about"
                 className={cn(
                   "text-sm font-medium text-muted hover:text-primary"
                 )}
               >
                 About Us
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#contact"
                 className={cn(
                   "text-sm font-medium text-muted hover:text-primary"
                 )}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </nav>
         )}

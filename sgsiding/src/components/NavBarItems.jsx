@@ -1,32 +1,34 @@
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+
 
 export default function NavBarItems() {
   return (
     <nav className="hidden md:flex space-x-6">
-      <a
-        href="#home"
+      <Link
+        to="/"
         className={cn("text-sm font-medium text-muted hover:text-primary")}
       >
         Home
-      </a>
-      <a
-        href="#services"
+      </Link>
+      <Link
+        to="/services"
         className={cn("text-sm font-medium text-muted hover:text-primary")}
       >
         Services
-      </a>
-      <a
-        href="#about"
+      </Link>
+      <Link
+        to="/about"
         className={cn("text-sm font-medium text-muted hover:text-primary")}
       >
         About Us
-      </a>
-      <a
-        href="#contact"
+      </Link>
+      <Link
+        to="/contact"
         className={cn("text-sm font-medium text-muted hover:text-primary")}
       >
         Contact
-      </a>
+      </Link>
     </nav>
   );
 }
