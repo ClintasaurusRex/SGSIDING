@@ -98,3 +98,23 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
+/* Mobile first approach */
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    /* Add base mobile styles here */
+  }
+}
+
+/* Then target larger screens */
+@screen sm {
+  /* 640px and up */
+}
+
+@screen md {
+  /* 768px and up */
+}
+
+@screen lg {
+  /* 1024px and up */
+}
