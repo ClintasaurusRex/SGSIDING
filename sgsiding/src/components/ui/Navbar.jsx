@@ -15,6 +15,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="text-lg font-bold text-primary">Siding Business</div>
+
         {/* Desktop Navigation */}
         <NavBarItems />
 

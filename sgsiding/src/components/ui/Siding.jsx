@@ -14,7 +14,7 @@ export default function Siding() {
   return (
     <main className="main-container">
       <span className="text-content">
-        {intro}
+        {intro} 
         <div className="service-contact">
           <Button onClick={() => console.log("Clicked")}>Services</Button>
           <Button onClick={() => console.log("Clicked")}>Contact</Button>

@@ -16,6 +16,8 @@
   justify-content: space-around;
   align-items: center;
   max-width: 100%;
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
 .text-content {
@@ -35,76 +37,7 @@
   padding: 5px;
 }
 
-/* Base styles for 13" screens (typically 1280x800 or 1366x768) */
-@media screen and (max-width: 1366px) {
-  .main-container {
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0 2rem;
-    max-width: 100%;
-  }
 
-  .text-content {
-    width: 100%;
-    padding: 0 1rem;
-    font-size: 0.95rem;
-  }
-
-  .-left-12 {
-    left: 22%;
-  }
-
-  .-right-12 {
-    right: 22%;
-  }
-}
-
-/* 16" screen styles (typically 1920x1080) */
-@media screen and (min-width: 1367px) and (max-width: 1920px) {
-  .main-container {
-    gap: 2rem;
-    padding: 0 3rem;
-  }
-
-  .text-content {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .-left-12 {
-    left: 24%;
-  }
-
-  .-right-12 {
-    right: 24%;
-  }
-}
-
-@media (max-width: 768px) {
-  .-left-12 {
-    left: 2%;
-  }
-  .-right-12 {
-    right: 2%;
-  }
-} /* 15-16 inch laptops (2560x1440) */
-@media screen and (min-width: 1921px) and (max-width: 2560px) {
-  .-left-12 {
-    left: 25%;
-  }
-  .-right-25 {
-    right: 25%;
-  }
-}
-/* 17-inch and larger (3840x2160) */
-@media screen and (min-width: 2561px) {
-  .-left-12 {
-    left: 26%;
-  }
-  .-right-12 {
-    right: 26%;
-  }
-}
 /* Laptops and larger screens */
 /* @media screen and (min-width: 1281px) and (max-width: 1366px),
   and (min-width: 1367px) and (max-width: 1920px),
