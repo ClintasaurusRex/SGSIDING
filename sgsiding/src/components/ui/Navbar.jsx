@@ -18,6 +18,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <NavBarItems />
+        
 
         {/* Mobile Menu Button */}
         <button
