@@ -1,9 +1,26 @@
+
+import useEmailjs from "../hooks/useEmailjs";
+
 export default function Contact() {
+  const { isSubmitting, status, handleSubmit } = useEmailjs();
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <div className="max-w-md mx-auto">
-        <form className="space-y-4">
+        {status.message && (
+          <div 
+            className={`mb-4 p-4 rounded ${
+              status.type === "success" 
+                ? "bg-green-100 text-green-700" 
+                : "bg-red-100 text-red-700"
+            }`}
+          >
+            {status.message}
+          </div>
+        )}
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">
               Name
@@ -39,9 +56,11 @@ export default function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white py-2 rounded-md hover:bg-primary/90"
+            disabled={isSubmitting}
+            className={`w-full bg-primary text-white py-2 rounded-md hover:bg-primary/90 
+              ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>
