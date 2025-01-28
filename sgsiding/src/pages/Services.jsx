@@ -5,7 +5,7 @@ export default function Services() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <ServiceCard 
           title="Siding Installation"
-          description="Professional installation of various siding materials including vinyl, fiber cement, and wood."
+          description="Professional installation of various siding materials including wood, fiber cement, and vinyl."
         />
         <ServiceCard 
           title="Siding Repair"
@@ -24,7 +24,7 @@ function ServiceCard({ title, description }) {
   return (
     <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
       <h2 className="text-xl font-semibold mb-3">{title}</h2>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-white-600">{description}</p>
     </div>
   );
 } 
