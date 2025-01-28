@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="flex flex-col items-center space-y-4 p-4">
               <Link
                 to="/"
-                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                className={cn("text-sm font-medium text-muted hover:text-primary ")}
                 onClick={toggleMenu}
               >
                 Home
