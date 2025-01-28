@@ -20,7 +20,7 @@ export default function Siding() {
 
   return (
     <main className="main-container">
-      <span className="text-content">
+      <span className="text-content ">
         {intro} 
         <div className="service-contact">
           <Button onClick={() => handleNavigation('/services')}>
