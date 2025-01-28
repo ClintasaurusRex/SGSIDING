@@ -22,7 +22,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-muted hover:text-primary"
+          className="md:hidden text-muted hover:text-primary bg-gray-600"
           onClick={toggleMenu}
         >
           <div className="flex items-center justify-center">
