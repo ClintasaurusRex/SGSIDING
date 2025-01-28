@@ -46,7 +46,7 @@ export default function About() {
         </section>
 
         {/* Closing Statement */}
-        <section className="text-center space-y-4">
+        <section className="text-center space-y-4 about-close">
           <p className="text-lg leading-relaxed">
             Whether you're looking to boost curb appeal, improve energy efficiency, or protect your home with siding built to last, SG Siding is the name you can count on. We bring passion, professionalism, and unparalleled craftsmanship to every project we undertake.
           </p>

@@ -47,14 +47,7 @@
   animation: glare 8s infinite linear;
 }
 
-@keyframes glare {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
+
 .about-grid{
   border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
@@ -103,4 +96,21 @@
   );
   border-left: 8px solid #6d6c6b;
   border-right: 8px solid #6d6c6b;
+}
+.about-close{
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: grey;
+}
+
+@keyframes glare {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
