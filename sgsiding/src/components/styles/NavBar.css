@@ -1,6 +1,10 @@
 .nav-items {
   font-size: 5.2rem;
+  /* padding: 0 20px; */
+  margin-top: 15px;
 }
 header{
   border-color: black;
+  background-color: #b68d5f;
+  height: 100px;
 }
