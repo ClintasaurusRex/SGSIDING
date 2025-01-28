@@ -5,10 +5,9 @@ export default function Contact() {
   const { isSubmitting, status, handleSubmit } = useEmailjs();
 
   return (
-    <div className='contact-card' >
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
-        <div className="max-w-md mx-auto">
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+      <div className="max-w-md mx-auto">
         {status.message && (
           <div 
             className={`mb-4 p-4 rounded ${
@@ -20,7 +19,7 @@ export default function Contact() {
             {status.message}
           </div>
         )}
-        
+         <div className='contact-card' >
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">
@@ -64,8 +63,8 @@ export default function Contact() {
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 } 
