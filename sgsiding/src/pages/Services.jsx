@@ -7,7 +7,7 @@ export default function Services() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         <ServiceCard 
           title="Siding Installation"
-          description="Professional installation of various siding materials including wood, fiber cement, and vinyl."
+          description="Professional installation of various siding materials including soffit, wood, fiber cement, and vinyl."
         />
         <ServiceCard 
           title="Siding Repair"
