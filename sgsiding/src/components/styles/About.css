@@ -27,7 +27,7 @@
   margin: 15px;
 }
 
-/* Add subtle animated glare effect */
+/* glare effect */
 .about-bg::before {
   content: '';
   position: absolute;
