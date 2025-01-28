@@ -11,7 +11,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="bg-444445 border-b shadow-sm transition-all duration-300 hover:shadow-lg">
+    <header className="bg-444445 border-b shadow-sm transition-all duration-300 hover:shadow-xl">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <div className="text-lg font-bold text-primary">Siding Business</div>
