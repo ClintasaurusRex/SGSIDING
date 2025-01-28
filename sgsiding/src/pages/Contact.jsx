@@ -1,5 +1,6 @@
 
 import useEmailjs from "../hooks/useEmailjs";
+import "../components/styles/Contact.css";
 
 export default function Contact() {
   const { isSubmitting, status, handleSubmit } = useEmailjs();
@@ -22,7 +23,7 @@ export default function Contact() {
          <div className='contact-card' >
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
+            <label htmlFor="name" className="block text-xl font-medium mb-1">
               Name
             </label>
             <input
@@ -33,7 +34,7 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">
+            <label htmlFor="email" className="block text-xl font-medium mb-1">
               Email
             </label>
             <input
@@ -44,7 +45,7 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1">
+            <label htmlFor="message" className="block text-xl font-medium mb-1">
               Message
             </label>
             <textarea
