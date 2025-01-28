@@ -1,6 +1,7 @@
 import { Button } from "./button";
 import "../styles/Siding.css";
 import { slides, intro } from "../../assets/sidingImages";
+import { useNavigate } from "react-router-dom";
 
 import {
   Carousel,
@@ -11,13 +12,23 @@ import {
 } from "./carousel";
 
 export default function Siding() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <main className="main-container">
       <span className="text-content">
         {intro} 
         <div className="service-contact">
-          <Button onClick={() => console.log("Clicked")}>Services</Button>
-          <Button onClick={() => console.log("Clicked")}>Contact</Button>
+          <Button onClick={() => handleNavigation('/services')}>
+            Services
+          </Button>
+          <Button onClick={() => handleNavigation('/contact')}>
+            Contact
+          </Button>
         </div>
       </span>
 

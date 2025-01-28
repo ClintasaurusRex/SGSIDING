@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils"; // Utility from ShadCN for conditional classnames
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils"; 
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import NavBarItems from "../NavBarItems";
 
 const Navbar = () => {
@@ -25,7 +25,9 @@ const Navbar = () => {
           className="md:hidden text-muted hover:text-primary"
           onClick={toggleMenu}
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          <div className="flex items-center justify-center">
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </div>
         </button>
 
         {/* Mobile Navigation */}
@@ -33,34 +35,30 @@ const Navbar = () => {
           <nav className="absolute top-16 left-0 w-full bg-white shadow-md border-t md:hidden">
             <div className="flex flex-col items-center space-y-4 p-4">
               <Link
-                href="#home"
-                className={cn(
-                  "text-sm font-medium text-muted hover:text-primary"
-                )}
+                to="/"
+                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                onClick={toggleMenu}
               >
                 Home
               </Link>
               <Link
-                href="#services"
-                className={cn(
-                  "text-sm font-medium text-muted hover:text-primary"
-                )}
+                to="/services"
+                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                onClick={toggleMenu}
               >
                 Services
               </Link>
               <Link
-                href="#about"
-                className={cn(
-                  "text-sm font-medium text-muted hover:text-primary"
-                )}
+                to="/about"
+                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                onClick={toggleMenu}
               >
                 About Us
               </Link>
               <Link
-                href="#contact"
-                className={cn(
-                  "text-sm font-medium text-muted hover:text-primary"
-                )}
+                to="/contact"
+                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                onClick={toggleMenu}
               >
                 Contact
               </Link>
