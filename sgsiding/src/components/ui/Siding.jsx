@@ -57,7 +57,7 @@ function CarouselSlide({ slide }) {
         <img
           src={slide.src}
           alt={slide.alt}
-          className="w-[441px] h-[332px] object-cover rounded-lg mx-auto"
+          className="rounded-lg mx-auto"
         />
       </div>
     </CarouselItem>

@@ -2,12 +2,12 @@
   margin-top: 100px;
 }
 .-left-12 {
-  left: 25%;
+  left: 13%;
   transform: translateX(-50%);
 }
 
 .-right-12 {
-  right: 25%;
+  right: 13%;
   transform: translateX(50%);
 }
 
@@ -20,6 +20,11 @@
   margin-top: 100px;
   gap: 2rem;
   padding: 0 2rem;
+}
+.carousel-items img {
+  height: 49em;
+  width: 50em;
+  object-fit: cover;
 }
 
 .text-content {
