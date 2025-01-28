@@ -70,9 +70,9 @@
   background-color: grey;
 }
 
+/* Ladder code if needed */
 .ladder {
   position: absolute;
-  
   right: 50px;
   top: 50%;
   transform: translateY(-50%);
@@ -80,8 +80,7 @@
   height: 100%;
   background: linear-gradient(
     90deg,
-    #8b4513 0%,    /* Dark wood color */
-    /* #a0522d 100%   Lighter wood color */
+    #8b4513 0%, 
   );
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
