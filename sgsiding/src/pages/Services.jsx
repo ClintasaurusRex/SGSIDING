@@ -1,32 +1,50 @@
 import "../components/styles/Services.css";
+import { sidingInstall, sidingRepair, sidingMaintenance } from "../assets/serviceInfo";
 
 export default function Services() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div className="flex flex-col gap-6">
         <ServiceCard 
-          title="Siding Installation"
-          description="Professional installation of various siding materials including soffit, wood, fiber cement, and vinyl."
+          title={sidingInstall.title}
+          description={sidingInstall.description}
+          services={sidingInstall.services}
+          conclusion={sidingInstall.conclusion}
         />
         <ServiceCard 
-          title="Siding Repair"
-          description="Expert repair services for damaged or worn siding to maintain your home's protection and appearance."
+          title={sidingRepair.title}
+          description={sidingRepair.description}
+          services={sidingRepair.services}
+          conclusion={sidingRepair.conclusion}
         />
         <ServiceCard 
-          title="Maintenance"
-          description="Regular maintenance and inspection services to ensure your siding remains in optimal condition."
+          title={sidingMaintenance.title}
+          description={sidingMaintenance.description}
+          services={sidingMaintenance.services}
+          conclusion={sidingMaintenance.conclusion}
         />
       </div>
     </div>
   );
 }
 
-function ServiceCard({ title, description }) {
+function ServiceCard({ title, description, services, conclusion }) {
   return (
     <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow services-grid">
       <h2 className="text-xl font-semibold mb-3">{title}</h2>
-      <p className="text-white-600">{description}</p>
+      <p className="text-gray-600 mb-4">{description}</p>
+      
+      <div className="flex flex-col gap-6">
+        {services.map((service, index) => (
+          <div key={index} className="p-4 border rounded-lg">
+            <h3 className="font-semibold mb-2">{service.title}</h3>
+            <p className="text-xl text-gray-600">{service.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-gray-600 mt-4">{conclusion}</p>
     </div>
   );
 } 
