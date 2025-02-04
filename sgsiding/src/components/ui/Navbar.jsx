@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -18,7 +18,6 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <NavBarItems />
-        
 
         {/* Mobile Menu Button */}
         <button
@@ -33,31 +32,39 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {menuOpen && (
           <nav className="absolute top-16 left-0 w-full bg-white shadow-md border-t md:hidden">
-            <div className="flex flex-col items-center space-y-4 p-4">
+            <div className="flex flex-col items-center space-y-4 p-4 nav-btns">
               <Link
                 to="/"
-                className={cn("text-sm font-medium text-muted hover:text-primary ")}
+                className={cn(
+                  "text-sm font-medium text-muted hover:text-primary homepage"
+                )}
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <Link
                 to="/services"
-                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                className={cn(
+                  "text-sm font-medium text-muted hover:text-primary service-link"
+                )}
                 onClick={toggleMenu}
               >
                 Services
               </Link>
               <Link
                 to="/about"
-                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                className={cn(
+                  "text-sm font-medium text-muted hover:text-primary about-page"
+                )}
                 onClick={toggleMenu}
               >
                 About Us
               </Link>
               <Link
                 to="/contact"
-                className={cn("text-sm font-medium text-muted hover:text-primary")}
+                className={cn(
+                  "text-sm font-medium text-muted hover:text-primary contact"
+                )}
                 onClick={toggleMenu}
               >
                 Contact
