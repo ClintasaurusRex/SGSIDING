@@ -15,7 +15,16 @@ const Navbar = () => {
     <header className="bg-444445 border-b shadow-sm transition-all duration-300 hover:shadow-xl">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <div className="text-lg font-bold text-primary">Siding Business</div>
+        <div className="text-lg font-bold text-primary business-title">
+          <img
+            src="sglogo.png"
+            width={100}
+            height={100}
+            alt="SG Siding Logo"
+            className="logo"
+          />
+          S.G Exteriors
+        </div>
 
         {/* Desktop Navigation */}
         <NavBarItems />

@@ -24,3 +24,27 @@ header {
   padding: 3px;
   width: 100%;
 }
+.logo {
+  max-height: 80px;
+  min-width: 80px;
+  object-fit: contain;
+  margin-right: 10px;
+  animation: glowPulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.5));
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 10 25px rgba(0, 255, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(0, 255, 0, 0.8));
+  }
+}
+
+.business-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
