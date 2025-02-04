@@ -26,7 +26,7 @@ export default function About() {
             materials that stand the test of time.
           </p>
           <br />
-          <p>
+          <p style={{ color: "lightgreen" }}>
             S.G Exteriors is fully covered with liability insurance and WCB.
           </p>
         </section>
