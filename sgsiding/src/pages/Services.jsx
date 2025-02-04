@@ -1,24 +1,28 @@
 import "../components/styles/Services.css";
-import { sidingInstall, sidingRepair, sidingMaintenance } from "../assets/serviceInfo";
+import {
+  sidingInstall,
+  sidingRepair,
+  sidingMaintenance,
+} from "../assets/serviceInfo";
 
 export default function Services() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Our Services</h1>
       <div className="flex flex-col gap-6">
-        <ServiceCard 
+        <ServiceCard
           title={sidingInstall.title}
           description={sidingInstall.description}
           services={sidingInstall.services}
           conclusion={sidingInstall.conclusion}
         />
-        <ServiceCard 
+        <ServiceCard
           title={sidingRepair.title}
           description={sidingRepair.description}
           services={sidingRepair.services}
           conclusion={sidingRepair.conclusion}
         />
-        <ServiceCard 
+        <ServiceCard
           title={sidingMaintenance.title}
           description={sidingMaintenance.description}
           services={sidingMaintenance.services}
@@ -34,10 +38,13 @@ function ServiceCard({ title, description, services, conclusion }) {
     <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow services-grid">
       <h2 className="text-xl font-semibold mb-3">{title}</h2>
       <p className="text-gray-600 mb-4">{description}</p>
-      
+
       <div className="flex flex-col gap-6">
         {services.map((service, index) => (
-          <div key={index} className="p-4 border rounded-lg">
+          <div
+            key={index}
+            className="p-4 border rounded-lg"
+          >
             <h3 className="font-semibold mb-2">{service.title}</h3>
             <p className="text-xl text-gray-600">{service.description}</p>
           </div>
@@ -47,4 +54,4 @@ function ServiceCard({ title, description, services, conclusion }) {
       <p className="text-gray-600 mt-4">{conclusion}</p>
     </div>
   );
-} 
+}
