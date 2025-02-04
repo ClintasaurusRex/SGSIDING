@@ -21,15 +21,13 @@ export default function Siding() {
   return (
     <main className="main-container">
       <span className="text-content ">
-        {intro} 
-        <div className="service-contact">
-          <Button onClick={() => handleNavigation('/services')}>
+        {intro}
+        {/* <div className="service-contact">
+          <Button onClick={() => handleNavigation("/services")}>
             Services
           </Button>
-          <Button onClick={() => handleNavigation('/contact')}>
-            Contact
-          </Button>
-        </div>
+          <Button onClick={() => handleNavigation("/contact")}>Contact</Button>
+        </div> */}
       </span>
 
       <div className="carousel-items">
