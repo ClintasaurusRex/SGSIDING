@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import NavBarItems from "../NavBarItems";
+import "../styles/NavBar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,12 +32,12 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <nav className="absolute top-16 left-0 w-full bg-white shadow-md border-t md:hidden">
-            <div className="flex flex-col items-center space-y-4 p-4 nav-btns">
+          <nav className="absolute top-16 left-0 w-full shadow-md border-t md:hidden nav-btns">
+            <div className="flex flex-col items-center space-y-4 p-4  ">
               <Link
                 to="/"
                 className={cn(
-                  "text-sm font-medium text-muted hover:text-primary homepage"
+                  "text-sm font-medium text-muted hover:text-primary btn-nav"
                 )}
                 onClick={toggleMenu}
               >
@@ -45,7 +46,7 @@ const Navbar = () => {
               <Link
                 to="/services"
                 className={cn(
-                  "text-sm font-medium text-muted hover:text-primary service-link"
+                  "text-sm font-medium text-muted hover:text-primary btn-nav"
                 )}
                 onClick={toggleMenu}
               >
@@ -54,7 +55,7 @@ const Navbar = () => {
               <Link
                 to="/about"
                 className={cn(
-                  "text-sm font-medium text-muted hover:text-primary about-page"
+                  "text-sm font-medium text-muted hover:text-primary btn-nav"
                 )}
                 onClick={toggleMenu}
               >
@@ -63,7 +64,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className={cn(
-                  "text-sm font-medium text-muted hover:text-primary contact"
+                  "text-sm font-medium text-muted hover:text-primary btn-nav"
                 )}
                 onClick={toggleMenu}
               >
