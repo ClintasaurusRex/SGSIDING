@@ -36,11 +36,7 @@ export const sidingRepair = {
       description:
         "We thoroughly inspect your siding to determine the extent of the damage and identify any underlying issues, such as moisture penetration or structural concerns.",
     },
-    // {
-    //   title: "Crack and Hole Repair",
-    //   description:
-    //     "From minor cracks to larger holes, we use durable materials and precise techniques to seamlessly repair the damage and prevent further issues.",
-    // },
+
     {
       title: "Replacement of Sections",
       description:
@@ -51,11 +47,6 @@ export const sidingRepair = {
       description:
         "To enhance your home's protection, we ensure all repaired areas are properly sealed and weatherproofed to resist moisture, wind, and other environmental factors.",
     },
-    // {
-    //   title: "Color Matching",
-    //   description:
-    //     "We take pride in restoring the aesthetic of your home by perfectly matching the color and texture of your existing siding, making repairs virtually undetectable.",
-    // },
   ],
   conclusion:
     "With a focus on quality, durability, and customer satisfaction, our siding repair services will help maintain your home's curb appeal and safeguard it from the elements. Whether you're dealing with minor wear or extensive damage, we're here to provide reliable, long-lasting repairs tailored to your needs.",
@@ -70,26 +61,11 @@ export const sidingMaintenance = {
       description:
         "We conduct detailed inspections to identify signs of wear, damage, or potential issues such as moisture infiltration, loose panels, or pest activity.",
     },
-    // {
-    //   title: "Cleaning",
-    //   description:
-    //     "We offer professional cleaning services to remove dirt, mold, mildew, and grime that can accumulate over time, restoring your siding's original look and preventing long-term damage.",
-    // },
     {
       title: "Sealing and Caulking",
       description:
         "To maintain weather resistance, we inspect and reseal seams, joints, and edges, ensuring your siding remains properly sealed against moisture and drafts.",
     },
-    // {
-    //   title: "Damage Prevention",
-    //   description:
-    //     "Through routine maintenance, we address minor concerns before they become costly repairs, such as identifying and replacing small cracks, chips, or loose sections.",
-    // },
-    // {
-    //   title: "Maintenance Plans",
-    //   description:
-    //     "We can create a tailored maintenance schedule for your specific siding material—whether it's wood, vinyl, or fiber cement—to maximize its durability and longevity.",
-    // },
   ],
   conclusion:
     "By investing in regular siding maintenance, you'll protect your home's structural integrity, maintain energy efficiency, and keep it looking its best year-round. Let us help you preserve the beauty and performance of your siding for years to come!",
