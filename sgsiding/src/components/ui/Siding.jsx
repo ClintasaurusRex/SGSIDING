@@ -1,7 +1,7 @@
-import { Button } from "./button";
+// import { Button } from "./button";
 import "../styles/Siding.css";
 import { slides, intro } from "../../assets/sidingImages";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import {
   Carousel,
@@ -12,11 +12,11 @@ import {
 } from "./carousel";
 
 export default function Siding() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
+  // const handleNavigation = (path) => {
+  //   navigate(path);
+  // };
 
   return (
     <main className="main-container">
