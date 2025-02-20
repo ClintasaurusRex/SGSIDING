@@ -5,18 +5,18 @@
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  background-color: #b68d5f;  /* Base wood color */
+  background-color: #b68d5f; /* Base wood color */
   background-image: repeating-linear-gradient(
     0deg,
-    #6b6b6b,  /* Darker wood shade for lines */
-    #32526b 7px,  /* Base wood color */
-    #5f8fb6 7px,  /* Lighter wood highlight */
-    #5f8fb6 58px
+    #6b6b6b,
+    /* Darker wood shade for lines */ #32526b 7px,
+    /* Base wood color */ #5f8fb6 7px,
+    /* Lighter wood highlight */ #5f8fb6 58px
   );
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;  /* Changed to white for better contrast */
+  color: #ffffff; /* Changed to white for better contrast */
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.5px;
