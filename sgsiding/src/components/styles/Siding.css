@@ -63,6 +63,12 @@
     width: 85%;
     padding: 1.25rem;
   }
+
+  .carousel-items img {
+    height: 18em;
+    width: 26em;
+    object-fit: cover;
+  }
 }
 
 /* Laptops */
