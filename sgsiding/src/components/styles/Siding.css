@@ -55,6 +55,11 @@
     padding: 1rem;
     font-size: 0.875rem;
   }
+  .carousel-items img {
+    height: 18em;
+    width: 26em;
+    object-fit: cover;
+  }
 }
 
 /* Tablets */
@@ -62,12 +67,6 @@
   .text-content {
     width: 85%;
     padding: 1.25rem;
-  }
-
-  .carousel-items img {
-    height: 18em;
-    width: 26em;
-    object-fit: cover;
   }
 }
 
