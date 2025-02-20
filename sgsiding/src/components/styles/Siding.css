@@ -62,6 +62,14 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .carousel-items img {
+    height: 18em;
+    width: 26em;
+    object-fit: cover;
+  }
+}
+
 /* Tablets */
 @media screen and (min-width: 376px) and (max-width: 768px) {
   .text-content {
