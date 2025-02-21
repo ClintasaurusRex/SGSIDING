@@ -36,8 +36,10 @@ export default function Services() {
 function ServiceCard({ title, description, services, conclusion }) {
   return (
     <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow services-grid">
-      <h2 className="text-xl font-semibold mb-3">{title}</h2>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="service-title">
+        <h2 className="text-xl font-semibold mb-3">{title}</h2>
+        <p className="text-black">{description}</p>
+      </div>
 
       <div className="flex flex-col gap-6">
         {services.map((service, index) => (
@@ -46,12 +48,13 @@ function ServiceCard({ title, description, services, conclusion }) {
             className="p-4 border rounded-lg"
           >
             <h3 className="font-semibold mb-2">{service.title}</h3>
-            <p className="text-xl text-gray-600">{service.description}</p>
+            <p className="text-xl text-black">{service.description}</p>
           </div>
         ))}
       </div>
-
-      <p className="text-gray-600 mt-4">{conclusion}</p>
+      <div className="service-conclusion">
+        <p className="text-black">{conclusion}</p>
+      </div>
     </div>
   );
 }
