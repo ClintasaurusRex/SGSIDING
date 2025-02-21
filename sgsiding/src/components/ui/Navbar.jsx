@@ -23,7 +23,7 @@ const Navbar = () => {
             alt="SG Siding Logo"
             className="logo"
           />
-          S.G Exteriors
+          <h2>Custom Exteriors</h2>
         </div>
 
         {/* Desktop Navigation */}
