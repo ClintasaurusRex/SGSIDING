@@ -38,7 +38,7 @@ function ServiceCard({ title, description, services, conclusion }) {
     <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow services-grid">
       <div className="service-title">
         <h2 className="text-xl font-semibold mb-3">{title}</h2>
-        <p className="text-black">{description}</p>
+        <p className="text-white">{description}</p>
       </div>
 
       <div className="flex flex-col gap-6">
@@ -48,12 +48,12 @@ function ServiceCard({ title, description, services, conclusion }) {
             className="p-4 border rounded-lg"
           >
             <h3 className="font-semibold mb-2">{service.title}</h3>
-            <p className="text-xl text-black">{service.description}</p>
+            <p className="text-xl text-white">{service.description}</p>
           </div>
         ))}
       </div>
       <div className="service-conclusion">
-        <p className="text-black">{conclusion}</p>
+        <p className="text-white">{conclusion}</p>
       </div>
     </div>
   );

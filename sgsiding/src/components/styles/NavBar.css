@@ -1,32 +1,38 @@
 .nav-items {
-  font-size: 5.2rem;
-  /* padding: 0 20px; */
+  font-size: 1.2rem;
   margin-top: 15px;
 }
 header {
   border-color: black;
   background-color: #b68d5f;
-  height: 100px;
+  min-height: 80px;
+  width: 100%;
+  top: 0;
+  z-index: 50;
 }
 .link-btns {
   transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
 }
+
 .link-btns:hover {
   color: darkblue;
-  transform: scale(120%) rotate(-2deg);
+  transform: scale(110%) rotate(-2deg);
 }
 .nav-btns {
   background-color: #b68d5f;
+  top: 80px;
 }
 .btn-nav {
   border: 2px solid black;
   border-radius: 10px;
-  padding: 3px;
-  width: 100%;
+  padding: 8px;
+  width: 90%;
+  margin: 0 auto;
 }
 .logo {
-  max-height: 80px;
-  min-width: 80px;
+  max-height: 60px;
+  min-width: 60px;
   object-fit: contain;
   margin-right: 10px;
   animation: glowPulse 2s ease-in-out infinite;
@@ -47,4 +53,19 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    min-height: 70px;
+  }
+
+  .logo {
+    max-height: 50px;
+    min-width: 50px;
+  }
+
+  .business-title h2 {
+    font-size: 1rem;
+  }
 }
