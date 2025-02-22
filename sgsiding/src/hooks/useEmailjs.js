@@ -1,5 +1,5 @@
 import { useState } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 export default function useEmailjs() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,14 +27,14 @@ export default function useEmailjs() {
 
       setStatus({
         type: "success",
-        message: "Thank you! Your message has been sent successfully."
+        message: "Thank you! Your message has been sent successfully.",
       });
       e.target.reset();
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       setStatus({
         type: "error",
-        message: "Oops! Something went wrong. Please try again later."
+        message: "Oops! Something went wrong. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
