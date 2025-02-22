@@ -1,17 +1,17 @@
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function useEmailjs() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState({ type: "", message: "" });
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setStatus({ type: "", message: "" });
+    setStatus({ type: '', message: '' });
 
     const templateParams = {
-      to_name: "Your Name", // The name of the person receiving the email
+      to_name: 'Your Name',
       from_name: e.target.name.value,
       from_email: e.target.email.value,
       message: e.target.message.value,
@@ -26,15 +26,15 @@ export default function useEmailjs() {
       );
 
       setStatus({
-        type: "success",
-        message: "Thank you! Your message has been sent successfully.",
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully.',
       });
       e.target.reset();
     } catch (error) {
-      console.error("Error:", error);
+      console.error('Error:', error);
       setStatus({
-        type: "error",
-        message: "Oops! Something went wrong. Please try again later.",
+        type: 'error',
+        message: 'Oops! Something went wrong. Please try again later.',
       });
     } finally {
       setIsSubmitting(false);
