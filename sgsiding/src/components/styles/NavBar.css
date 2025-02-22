@@ -15,7 +15,7 @@ header {
 }
 
 .link-btns:hover {
-  color: darkblue;
+  color: rgba(0, 255, 0, 0.5);
   transform: scale(110%) rotate(-2deg);
 }
 .nav-btns {
