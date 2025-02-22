@@ -1,7 +1,6 @@
-// import { Button } from "./button";
 import '../styles/Siding.css';
 import { slides, intro } from '../../assets/sidingImages';
-// import { useNavigate } from "react-router-dom";
+import { useLoading } from '@/hooks/useLoading';
 
 import {
   Carousel,
@@ -12,12 +11,14 @@ import {
 } from './carousel';
 
 export default function Siding() {
+  const { isLoading } = useLoading();
+
   return (
     <main className='main-container'>
       <span className='text-content '>{intro}</span>
 
       <div className='carousel-items'>
-        <Carousel className='w-full max-w-5xl mx-auto'>
+        <Carousel className='w-full max-w-5xl mx-auto' isLoading={isLoading}>
           <CarouselContent>
             {slides.map((slide) => (
               <CarouselSlide key={slide.id} slide={slide} />
