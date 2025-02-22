@@ -14,7 +14,9 @@ header {
   transition: 0.3s;
   font-family: 'Roboto', sans-serif;
 }
-
+.nav-title {
+  font-family: 'Roboto', sans-serif;
+}
 .link-btns:hover {
   color: darkblue;
   transform: scale(110%) rotate(-2deg);
