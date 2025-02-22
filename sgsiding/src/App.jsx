@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/ui/Navbar";
+import { Footer } from "./components/ui/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
@@ -28,6 +29,7 @@ function App() {
           element={<Contact />}
         />
       </Routes>
+      <Footer />
     </>
   );
 }
