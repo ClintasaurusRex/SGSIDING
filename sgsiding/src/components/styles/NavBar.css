@@ -68,3 +68,17 @@ header {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 1044px) {
+  header {
+    min-height: 100px;
+  }
+
+  .logo {
+    max-height: 50px;
+    min-width: 50px;
+  }
+
+  .business-title h2 {
+    font-size: 1rem;
+  }
+}
