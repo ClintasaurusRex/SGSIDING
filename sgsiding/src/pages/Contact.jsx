@@ -27,7 +27,7 @@ export default function Contact() {
               {emailAddress}
             </span>
             <p className="mt-2 text-sm text-black copy-status">
-              (Hover to reveal, click to open email client)
+              (Hover to reveal, click to open email)
             </p>
           </div>
         </div>
