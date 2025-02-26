@@ -4,7 +4,7 @@ export default function Contact() {
   const emailAddress = import.meta.env.VITE_EMAIL;
 
   const handleEmailClick = () => {
-    window.location.href = `mailto:${emailAddress}`;
+    window.open(`mailto:${emailAddress}`, "_blank");
   };
 
   return (
