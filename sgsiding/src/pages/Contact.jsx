@@ -1,21 +1,10 @@
 import "../components/styles/Contact.css";
-import { useState } from "react";
 
 export default function Contact() {
-  const [copyStatus, setCopyStatus] = useState("");
   const emailAddress = import.meta.env.VITE_EMAIL;
 
-  const handleCopyEmail = () => {
-    navigator.clipboard
-      .writeText(emailAddress)
-      .then(() => {
-        setCopyStatus("Email copied!");
-        setTimeout(() => setCopyStatus(""), 2000);
-      })
-      .catch(() => {
-        setCopyStatus("Copy failed");
-        setTimeout(() => setCopyStatus(""), 2000);
-      });
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${emailAddress}`;
   };
 
   return (
@@ -32,16 +21,14 @@ export default function Contact() {
               onMouseLeave={(e) => e.target.classList.remove("email-visible")}
               onFocus={(e) => e.target.classList.add("email-visible")}
               onBlur={(e) => e.target.classList.remove("email-visible")}
-              onClick={handleCopyEmail}
+              onClick={handleEmailClick}
               tabIndex="0"
             >
               {emailAddress}
             </span>
-            {copyStatus ? (
-              <p className="mt-2 text-sm text-black font-medium copy-status">{copyStatus}</p>
-            ) : (
-              <p className="mt-2 text-sm copy-status">(Hover to reveal, click to copy)</p>
-            )}
+            <p className="mt-2 text-sm text-black copy-status">
+              (Hover to reveal, click to open email client)
+            </p>
           </div>
         </div>
       </div>
