@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Contact() {
   const [copyStatus, setCopyStatus] = useState("");
-  const emailAddress = import.meta.env.VITE_EMAIL;
+  const emailAddress = "example@yourdomain.com"; // Replace with actual email
 
   const handleCopyEmail = () => {
     navigator.clipboard
@@ -38,10 +38,15 @@ export default function Contact() {
               {emailAddress}
             </span>
             {copyStatus ? (
-              <p className="mt-2 text-sm text-black font-medium copy-status">{copyStatus}</p>
+              <p className="mt-2 text-sm text-green-600 font-medium">{copyStatus}</p>
             ) : (
-              <p className="mt-2 text-sm copy-status">(Hover to reveal, click to copy)</p>
+              <p className="mt-2 text-sm text-gray-600">(Hover to reveal, click to copy)</p>
             )}
+          </div>
+
+          <div className="mt-6">
+            <h2 className="text-xl font-semibold mb-2">Alternative Contact Methods</h2>
+            <p>You can also reach us by phone at: (123) 456-7890</p>
           </div>
         </div>
       </div>
