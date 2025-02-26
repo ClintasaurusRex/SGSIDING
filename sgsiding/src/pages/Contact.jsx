@@ -2,8 +2,6 @@ import "../components/styles/Contact.css";
 import { useState } from "react";
 
 export default function Contact() {
-  const emailAddress = import.meta.env.VITE_EMAIL;
-
   const [emailRevealed, setEmailRevealed] = useState(false);
 
   // Email is split to make it harder for scrapers
