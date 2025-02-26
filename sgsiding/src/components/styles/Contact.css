@@ -12,8 +12,8 @@
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
-  color: transparent;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: transparent !important;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
   transition: all 0.3s ease;
   cursor: pointer;
   padding: 5px 10px;
@@ -22,8 +22,8 @@
 }
 
 .email-visible {
-  color: #000;
-  text-shadow: none;
+  color: #000 !important;
+  text-shadow: none !important;
   background-color: #e9ecef;
 }
 .copy-status {
