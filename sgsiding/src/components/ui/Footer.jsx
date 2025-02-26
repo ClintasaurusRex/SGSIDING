@@ -72,7 +72,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar ! */}
         <div className="mt-8 border-t border-gray-700 pt-8">
           <p className="text-center text-sm text-gray-300">
             © {new Date().getFullYear()} SG Custom Exteriors. All rights reserved.
