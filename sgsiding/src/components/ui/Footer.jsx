@@ -52,6 +52,8 @@ export function Footer() {
               {emailRevealed ? (
                 <a
                   href={`mailto:${emailParts.join("")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-sm text-gray-300 hover:text-white transition"
                 >
                   Email: {emailParts.join("")}
