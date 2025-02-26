@@ -49,14 +49,6 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contact Us</h3>
             <div className="space-y-2">
-              <p className="text-sm text-gray-300">Cowichan Valley, BC</p>
-              <a
-                href="tel:+12501234567"
-                className="block text-sm text-gray-300 hover:text-white transition"
-              >
-                Phone: (250) 123-4567
-              </a>
-
               {emailRevealed ? (
                 <a
                   href={`mailto:${emailParts.join("")}`}
