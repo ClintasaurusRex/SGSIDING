@@ -73,9 +73,9 @@ header {
   }
 
   .logo {
-    margin-top: 0;
-    max-height: 50px;
+    max-height: 150px;
     min-width: 50px;
+    margin-top: 36px;
   }
 
   /* Style for the menu button container */

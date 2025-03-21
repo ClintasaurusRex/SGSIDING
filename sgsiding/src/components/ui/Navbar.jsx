@@ -25,7 +25,11 @@ const Navbar = () => {
           />
           <h2
             className='hidden md:block'
-            style={{ textDecoration: 'underline', color: 'black' }}
+            style={{
+              textDecoration: 'underline',
+              color: 'black',
+              marginTop: 26,
+            }}
           >
             S.G Custom Interiors
           </h2>
