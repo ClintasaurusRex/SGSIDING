@@ -44,6 +44,7 @@ header {
   min-width: 60px;
   object-fit: contain;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  margin-top: 15px;
 }
 
 .business-title {
@@ -58,11 +59,30 @@ header {
 
   .container {
     padding: 0 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .business-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
   }
 
   .logo {
+    margin-top: 0;
     max-height: 50px;
     min-width: 50px;
+  }
+
+  /* Style for the menu button container */
+  .container > button {
+    position: relative; /* Change from absolute to relative */
+    margin-top: 35px;
+    margin-left: auto; /* Push to the right */
   }
 }
 
@@ -72,8 +92,9 @@ header {
   }
 
   .logo {
-    max-height: 50px;
+    max-height: 150px;
     min-width: 50px;
+    margin-top: 36px;
   }
 }
 
@@ -137,6 +158,7 @@ header {
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 25px;
 }
 
 .wood-button:hover {
@@ -163,5 +185,9 @@ header {
   .nav-link {
     font-size: 1.1rem;
     padding: 0.75rem 1rem;
+  }
+
+  .wood-button {
+    margin-top: 35px;
   }
 }

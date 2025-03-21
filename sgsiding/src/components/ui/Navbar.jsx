@@ -23,7 +23,10 @@ const Navbar = () => {
             alt='SG Siding Logo'
             className='logo'
           />
-          <h2 style={{ textDecoration: 'underline', color: 'black' }}>
+          <h2
+            className='hidden md:block'
+            style={{ textDecoration: 'underline', color: 'black' }}
+          >
             S.G Custom Interiors
           </h2>
         </div>
