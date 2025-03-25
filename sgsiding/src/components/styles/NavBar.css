@@ -10,7 +10,9 @@
 
 header {
   border-color: black;
-  background-color: #b68d5f;
+  background-color: rgba(182, 141, 95, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   min-height: 80px;
   width: 100%;
   top: 0;
@@ -99,9 +101,15 @@ header {
 }
 
 .wood-navbar {
-  background: linear-gradient(to bottom, #8b4513, #654321);
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 69, 19, 0.95),
+    rgba(101, 67, 33, 0.95)
+  );
   border-bottom: 4px solid #5c2e0c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   position: relative;
 }
 
@@ -170,7 +178,13 @@ header {
   top: 100%;
   left: 0;
   right: 0;
-  background: linear-gradient(to bottom, #8b4513, #654321);
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 69, 19, 0.98),
+    rgba(101, 67, 33, 0.98)
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-top: 2px solid #5c2e0c;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;

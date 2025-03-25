@@ -2,7 +2,6 @@ import { cn } from '@/lib/utils';
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import NavBarItems from '../NavBarItems';
 import '../styles/NavBar.css';
 
@@ -11,8 +10,16 @@ const Navbar = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
+    }
+  };
+
   return (
-    <header className='wood-navbar'>
+    <header className='wood-navbar fixed top-0 left-0 right-0 z-50'>
       <div className='container mx-auto flex items-center justify-between px-8 py-3'>
         {/* Logo */}
         <div className='text-lg font-bold text-primary business-title'>
@@ -37,7 +44,32 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className='hidden lg:block'>
-          <NavBarItems />
+          <nav className='flex space-x-8'>
+            <button
+              onClick={() => scrollToSection('home')}
+              className='nav-link'
+            >
+              Home
+            </button>
+            <button
+              onClick={() => scrollToSection('services')}
+              className='nav-link'
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection('about')}
+              className='nav-link'
+            >
+              About Us
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className='nav-link'
+            >
+              Contact
+            </button>
+          </nav>
         </div>
 
         {/* Mobile Menu Button */}
@@ -54,18 +86,30 @@ const Navbar = () => {
         {menuOpen && (
           <nav className='wood-mobile-nav'>
             <div className='flex flex-col items-center space-y-4 p-4'>
-              <Link to='/' className='nav-link' onClick={toggleMenu}>
+              <button
+                onClick={() => scrollToSection('home')}
+                className='nav-link'
+              >
                 Home
-              </Link>
-              <Link to='/services' className='nav-link' onClick={toggleMenu}>
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className='nav-link'
+              >
                 Services
-              </Link>
-              <Link to='/about' className='nav-link' onClick={toggleMenu}>
+              </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className='nav-link'
+              >
                 About Us
-              </Link>
-              <Link to='/contact' className='nav-link' onClick={toggleMenu}>
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className='nav-link'
+              >
                 Contact
-              </Link>
+              </button>
             </div>
           </nav>
         )}
