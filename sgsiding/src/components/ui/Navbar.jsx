@@ -1,132 +1,129 @@
-import { cn } from '@/lib/utils';
-
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import NavBarItems from '../NavBarItems';
+import React, { useState, useEffect } from 'react';
 import '../styles/NavBar.css';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['services', 'gallery', 'about', 'contact'];
+      const scrollPosition = window.scrollY + 100;
 
-  const scrollToSection = (sectionId) => {
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false);
+      const navHeight = 96; // Match navbar height from CSS
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+
+      setActiveSection(sectionId);
+      setIsOpen(false);
     }
   };
 
   return (
-    <header className='wood-navbar fixed top-0 left-0 right-0 z-50'>
-      <div className='container mx-auto flex items-center justify-between px-8 py-3'>
-        {/* Logo */}
-        <div className='text-lg font-bold text-primary business-title'>
-          <img
-            src='sglogo.png'
-            width={100}
-            height={100}
-            alt='SG Siding Logo'
-            className='logo'
-          />
-          {/* <h2
-            className='hidden md:block'
-            style={{
-              textDecoration: 'underline',
-              color: 'black',
-              marginTop: 26,
-            }}
-          >
-            S.G Custom Interiors
-          </h2> */}
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className='hidden lg:block'>
-          <nav className='flex space-x-8'>
-            <button
-              onClick={() => scrollToSection('home')}
-              className='nav-link'
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className='nav-link'
-            >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection('gallery')}
-              className='nav-link'
-            >
-              Gallery
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className='nav-link'
-            >
-              About Us
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className='nav-link'
-            >
-              Contact
-            </button>
-          </nav>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className='lg:hidden text-muted hover:text-primary wood-button'
-          onClick={toggleMenu}
+    <nav className='navbar navbar-expand-xl fixed-top'>
+      <div className='container'>
+        <a
+          className='navbar-brand'
+          href='#'
+          onClick={(e) => handleNavClick(e, 'home')}
         >
-          <div className='flex items-center justify-center'>
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </div>
+          <img src='/sglogo.png' alt='SG Siding Logo' className='navbar-logo' />
+        </a>
+
+        <button
+          className='navbar-toggler'
+          type='button'
+          aria-controls='navbarSupportedContent'
+          aria-expanded={isOpen}
+          aria-label='Toggle navigation'
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span
+            className={`navbar-toggler-icon ${isOpen ? 'open' : ''}`}
+          ></span>
         </button>
 
-        {/* Mobile Navigation */}
-        {menuOpen && (
-          <nav className='wood-mobile-nav'>
-            <div className='flex flex-col items-center space-y-4 p-4'>
-              <button
-                onClick={() => scrollToSection('home')}
-                className='nav-link'
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className='nav-link'
+        <div
+          className={`navbar-collapse ${isOpen ? 'show' : ''}`}
+          id='navbarSupportedContent'
+        >
+          <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+            <li className='nav-item'>
+              <a
+                className={`nav-link ${
+                  activeSection === 'services' ? 'active' : ''
+                }`}
+                href='#services'
+                onClick={(e) => handleNavClick(e, 'services')}
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection('gallery')}
-                className='nav-link'
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                className={`nav-link ${
+                  activeSection === 'gallery' ? 'active' : ''
+                }`}
+                href='#gallery'
+                onClick={(e) => handleNavClick(e, 'gallery')}
               >
                 Gallery
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className='nav-link'
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a
+                className={`nav-link ${
+                  activeSection === 'about' ? 'active' : ''
+                }`}
+                href='#about'
+                onClick={(e) => handleNavClick(e, 'about')}
               >
                 About Us
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className='nav-link'
-              >
-                Contact
-              </button>
-            </div>
-          </nav>
-        )}
+              </a>
+            </li>
+          </ul>
+          <div className='d-flex'>
+            <a
+              href='mailto:shaungersthofer@gmail.com'
+              target='_blank'
+              className={` nav-link ${
+                activeSection === 'contact' ? 'active' : ''
+              }`}
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
