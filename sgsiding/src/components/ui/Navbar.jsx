@@ -1,126 +1,77 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/NavBar.css';
+import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['services', 'gallery', 'about', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (e, sectionId) => {
-    e.preventDefault();
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navHeight = 96; // Match navbar height from CSS
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-
-      setActiveSection(sectionId);
-      setIsOpen(false);
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
     }
   };
 
   return (
-    <nav className='navbar navbar-expand-xl fixed-top'>
-      <div className='container'>
-        <a
-          className='navbar-brand'
-          href='#'
-          onClick={(e) => handleNavClick(e, 'home')}
-        >
-          <img src='/sglogo.png' alt='SG Siding Logo' className='navbar-logo' />
-        </a>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className='navbar-container'>
+        <Link to='/' className='navbar-logo'>
+          <img src='/sglogo.png' alt='SG Siding Logo' />
+        </Link>
 
         <button
-          className='navbar-toggler'
-          type='button'
-          aria-controls='navbarSupportedContent'
-          aria-expanded={isOpen}
-          aria-label='Toggle navigation'
-          onClick={() => setIsOpen(!isOpen)}
+          className={`navbar-toggle ${isMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label='Toggle navigation menu'
+          aria-expanded={isMenuOpen}
+          aria-controls='navbar-menu'
         >
-          <span
-            className={`navbar-toggler-icon ${isOpen ? 'open' : ''}`}
-          ></span>
+          <div className='navbar-toggle-icon'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
 
         <div
-          className={`navbar-collapse ${isOpen ? 'show' : ''}`}
-          id='navbarSupportedContent'
+          id='navbar-menu'
+          className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}
+          role='navigation'
+          aria-label='Main navigation'
         >
-          <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-            <li className='nav-item'>
-              <a
-                className={`nav-link ${
-                  activeSection === 'services' ? 'active' : ''
-                }`}
-                href='#services'
-                onClick={(e) => handleNavClick(e, 'services')}
-              >
+          <ul className='navbar-links'>
+            <li>
+              <button onClick={() => scrollToSection('home')}>Home</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('services')}>
                 Services
-              </a>
+              </button>
             </li>
-            <li className='nav-item'>
-              <a
-                className={`nav-link ${
-                  activeSection === 'gallery' ? 'active' : ''
-                }`}
-                href='#gallery'
-                onClick={(e) => handleNavClick(e, 'gallery')}
-              >
+            <li>
+              <button onClick={() => scrollToSection('gallery')}>
                 Gallery
-              </a>
+              </button>
             </li>
-            <li className='nav-item'>
-              <a
-                className={`nav-link ${
-                  activeSection === 'about' ? 'active' : ''
-                }`}
-                href='#about'
-                onClick={(e) => handleNavClick(e, 'about')}
-              >
-                About Us
-              </a>
+            <li>
+              <button onClick={() => scrollToSection('about')}>About</button>
+            </li>
+            <li>
+              <button onClick={() => scrollToSection('contact')}>
+                Contact
+              </button>
             </li>
           </ul>
-          <div className='d-flex'>
-            <a
-              href='mailto:shaungersthofer@gmail.com'
-              target='_blank'
-              className={` nav-link ${
-                activeSection === 'contact' ? 'active' : ''
-              }`}
-            >
-              Get In Touch
-            </a>
-          </div>
         </div>
       </div>
     </nav>

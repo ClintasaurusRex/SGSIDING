@@ -1,5 +1,4 @@
 import './App.css';
-import Navbar from './components/ui/Navbar';
 import { Footer } from './components/ui/Footer';
 import Loading from './components/ui/Loading';
 import { useLoading } from './hooks/useLoading';
@@ -8,6 +7,7 @@ import Services from '../src/pages/Services';
 import About from '../src/pages/About';
 import Contact from '../src/pages/Contact';
 import Gallery from './components/ui/Gallery';
+import Navbar from './components/ui/Navbar';
 
 function App() {
   const isLoading = useLoading();
@@ -34,10 +34,10 @@ function App() {
           <h2>About Us</h2>
           <About />
         </section>
-        {/* <section id='contact' className='section'>
+        <section id='contact' className='section'>
           <h2>Contact Us</h2>
           <Contact />
-        </section> */}
+        </section>
       </main>
       <Footer />
     </>
