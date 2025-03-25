@@ -7,6 +7,7 @@ import Siding from './components/ui/Siding';
 import Services from '../src/pages/Services';
 import About from '../src/pages/About';
 import Contact from '../src/pages/Contact';
+import Gallery from './components/ui/Gallery';
 
 function App() {
   const isLoading = useLoading();
@@ -19,10 +20,15 @@ function App() {
     <>
       <Navbar />
       <main className='content'>
-        <Siding />
+        <section id='home' className='hero-section'>
+          <Siding />
+        </section>
         <section id='services' className='section'>
           <h2>Our Services</h2>
           <Services />
+        </section>
+        <section id='gallery' className='section'>
+          <Gallery />
         </section>
         <section id='about' className='section'>
           <h2>About Us</h2>

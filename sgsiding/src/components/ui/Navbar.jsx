@@ -58,6 +58,12 @@ const Navbar = () => {
               Services
             </button>
             <button
+              onClick={() => scrollToSection('gallery')}
+              className='nav-link'
+            >
+              Gallery
+            </button>
+            <button
               onClick={() => scrollToSection('about')}
               className='nav-link'
             >
@@ -97,6 +103,12 @@ const Navbar = () => {
                 className='nav-link'
               >
                 Services
+              </button>
+              <button
+                onClick={() => scrollToSection('gallery')}
+                className='nav-link'
+              >
+                Gallery
               </button>
               <button
                 onClick={() => scrollToSection('about')}
