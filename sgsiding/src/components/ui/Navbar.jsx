@@ -30,7 +30,7 @@ const Navbar = () => {
             alt='SG Siding Logo'
             className='logo'
           />
-          <h2
+          {/* <h2
             className='hidden md:block'
             style={{
               textDecoration: 'underline',
@@ -39,7 +39,7 @@ const Navbar = () => {
             }}
           >
             S.G Custom Interiors
-          </h2>
+          </h2> */}
         </div>
 
         {/* Desktop Navigation */}

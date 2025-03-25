@@ -19,9 +19,7 @@ function App() {
     <>
       <Navbar />
       <main className='content'>
-        <section id='home' className='hero-section'>
-          <Siding />
-        </section>
+        <Siding />
         <section id='services' className='section'>
           <h2>Our Services</h2>
           <Services />

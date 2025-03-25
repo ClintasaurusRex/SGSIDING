@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 #root {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -6,8 +12,9 @@
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  max-width: 100%;
 
-  background: url('/public/style/dark-wood-1920x1080.png') repeat;
+  background: url('/style/dark-wood-1920x1080.png') repeat;
 
   background-position: center;
 
@@ -44,13 +51,16 @@ p {
   overflow-y: auto;
 }
 
-.hero-section {
-  min-height: calc(100vh - 80px); /* Adjust based on your navbar height */
+/* .hero-section {
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-}
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+} */
 
 .section {
   min-height: 100vh;
