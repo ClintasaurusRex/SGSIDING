@@ -16,13 +16,13 @@ export default function Services() {
           services={sidingInstall.services}
           conclusion={sidingInstall.conclusion}
         />
-        <div className='service-divider' />
+        {/* <div className='service-divider' />
         <ServiceCard
           title={sidingRepair.title}
           description={sidingRepair.description}
           services={sidingRepair.services}
           conclusion={sidingRepair.conclusion}
-        />
+        /> */}
         <div className='service-divider' />
         <ServiceCard
           title={sidingMaintenance.title}

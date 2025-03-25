@@ -34,10 +34,10 @@ function App() {
           <h2>About Us</h2>
           <About />
         </section>
-        <section id='contact' className='section'>
+        {/* <section id='contact' className='section'>
           <h2>Contact Us</h2>
           <Contact />
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>
