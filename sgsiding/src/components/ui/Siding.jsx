@@ -1,43 +1,18 @@
 import '../styles/Siding.css';
-import { slides, intro } from '../../assets/sidingImages';
-import { useLoading } from '@/hooks/useLoading';
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from './carousel';
+import { intro } from '../../assets/sidingImages';
 
 export default function Siding() {
-  const { isLoading } = useLoading();
-
   return (
-    <main className='main-container'>
-      <span className='text-content '>{intro}</span>
-
-      <div className='carousel-items'>
-        <Carousel className='w-full max-w-5xl mx-auto' isLoading={isLoading}>
-          <CarouselContent>
-            {slides.map((slide) => (
-              <CarouselSlide key={slide.id} slide={slide} />
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+    <section className='hero-section'>
+      <div className='hero-background'>
+        <img src='/sgsiding5.jpeg' alt='SG Siding Hero' />
       </div>
-    </main>
-  );
-}
-
-function CarouselSlide({ slide }) {
-  return (
-    <CarouselItem>
-      <div className='p-1'>
-        <img src={slide.src} alt={slide.alt} className='rounded-lg mx-auto' />
+      <div className='hero-overlay'>
+        <div className='hero-content'>
+          <h1 className='hero-title'>S.G Custom Interiors</h1>
+          <p className='hero-text'>{intro}</p>
+        </div>
       </div>
-    </CarouselItem>
+    </section>
   );
 }
