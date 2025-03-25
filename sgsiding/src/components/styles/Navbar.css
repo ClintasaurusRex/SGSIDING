@@ -6,8 +6,9 @@
   z-index: 1000;
   background: linear-gradient(to right, #016780, #b8ebb4);
   transition: all 0.3s ease-in-out;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid #0b8001;
+  height: auto;
 }
 
 /* .navbar.scrolled {
@@ -31,7 +32,7 @@
 }
 
 .navbar-logo img {
-  height: 50px;
+  height: 45px;
   transition: all 0.3s ease-in-out;
 }
 
