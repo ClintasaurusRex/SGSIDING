@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const StyledFooter = styled('footer')({
   marginTop: 'auto',
@@ -14,6 +15,19 @@ const FooterContainer = styled(Container)({
   alignItems: 'center',
   flexWrap: 'wrap',
   gap: '1rem',
+});
+
+const IconLink = styled(Link)({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+  color: 'rgba(255, 255, 255, 0.7)',
+  textDecoration: 'none',
+  transition: 'all 0.3s ease',
+  '&:hover': {
+    color: '#fff',
+    transform: 'translateY(-2px)',
+  },
 });
 
 export function Footer() {
@@ -33,19 +47,14 @@ export function Footer() {
         </Box>
 
         <Box sx={{ flex: 1, textAlign: 'right' }}>
-          <Link
+          <IconLink
             href='mailto:shaungersthofer@gmail.com'
-            color='inherit'
             target='_blank'
             rel='noopener noreferrer'
-            sx={{
-              textDecoration: 'none',
-              color: 'rgba(255, 255, 255, 0.7)',
-              '&:hover': { color: '#fff' },
-            }}
           >
-            Contact Us
-          </Link>
+            <EnvelopeIcon width={24} height={24} />
+            <span>Contact Us</span>
+          </IconLink>
         </Box>
       </FooterContainer>
     </StyledFooter>
