@@ -1,51 +1,72 @@
 import '../components/styles/Contact.css';
-import { useState } from 'react';
+import { Box, Container, Typography, Link } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { EnvelopeIcon } from '@heroicons/react/24/outline';
+
+const StyledContainer = styled(Container)({
+  padding: '2rem 0',
+  minHeight: '60vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+});
+
+const ContactCard = styled(Box)({
+  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  borderRadius: '1rem',
+  padding: '2rem',
+  backdropFilter: 'blur(10px)',
+  border: '1px solid rgba(255, 255, 255, 0.1)',
+  maxWidth: '500px',
+  width: '100%',
+  textAlign: 'center',
+});
+
+const IconLink = styled(Link)({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '0.75rem',
+  color: 'rgba(255, 255, 255, 0.9)',
+  textDecoration: 'none',
+  padding: '1rem 2rem',
+  borderRadius: '0.5rem',
+  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+  transition: 'all 0.3s ease',
+  marginTop: '1rem',
+  '&:hover': {
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    transform: 'translateY(-2px)',
+    color: '#fff',
+  },
+});
 
 export default function Contact() {
-  const [emailRevealed, setEmailRevealed] = useState(false);
-
-  // Email is split to make it harder for scrapers
-  const emailParts = ['shaungersthof', 'er@gm', 'ail.com'];
-  const blurredEmail = 'shaun•••••••••@gmail.com';
-
-  const revealEmail = (e) => {
-    e.preventDefault();
-    setEmailRevealed(true);
-  };
-
   return (
-    <div className='container mx-auto px-4 py-8'>
-      <div className='max-w-md mx-auto'>
-        <div className='contact-card p-6 rounded-lg shadow-md'>
-          <p className='mb-4'>You can reach us at:</p>
-
-          <div className='space-y-2'>
-            {emailRevealed ? (
-              <a
-                href={`mailto:${emailParts.join('')}`}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='block text-lg bg-white text-black hover:text-blue transition email-rev'
-              >
-                Email: {emailParts.join('')}
-              </a>
-            ) : (
-              <button
-                onClick={revealEmail}
-                className='block text-sm text-gray-300 hover:text-white transition cursor-pointer focus:outline-none'
-              >
-                Email:{' '}
-                <span className='filter blur-[2px] hover:blur-0 transition-all duration-300'>
-                  {blurredEmail}
-                </span>
-                <span className='ml-2 text-xs text-black'>
-                  (click to reveal)
-                </span>
-              </button>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+    <StyledContainer>
+      <ContactCard>
+        <Typography
+          variant='h5'
+          component='h2'
+          gutterBottom
+          sx={{ color: 'white', mb: 3 }}
+        >
+          Get in Touch
+        </Typography>
+        <Typography
+          variant='body1'
+          sx={{ color: 'rgba(255, 255, 255, 0.8)', mb: 3 }}
+        >
+          We'd love to hear from you. Send us an email to discuss your project.
+        </Typography>
+        <IconLink
+          href='mailto:shaungersthofer@gmail.com'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <EnvelopeIcon width={24} height={24} />
+          <span>Contact Us</span>
+        </IconLink>
+      </ContactCard>
+    </StyledContainer>
   );
 }
