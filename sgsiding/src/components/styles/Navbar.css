@@ -120,7 +120,7 @@
 }
 
 .navbar-links button::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -136,6 +136,11 @@
 
 .navbar-links button:hover::after {
   width: 100%;
+}
+
+.navbar-links button:focus,
+.navbar-links button:focus-visible {
+  outline: none;
 }
 
 @media (max-width: 768px) {
