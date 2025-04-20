@@ -41,7 +41,7 @@
 } */
 
 .navbar-toggle {
-  display: none;
+  display: none; /* Initially hidden */
   background: #0b8001;
   border: none;
   cursor: pointer;
@@ -53,8 +53,7 @@
   border-radius: 8px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
-  /* Added to properly center the icon */
-  display: flex;
+  /* Center the icon when visible */
   align-items: center;
   justify-content: center;
 }
