@@ -183,6 +183,7 @@
   .navbar-links {
     flex-direction: column;
     gap: 1.5rem;
+    margin: 0 auto;
   }
 
   .navbar-links li {
