@@ -33,20 +33,27 @@ const IconLink = styled(Link)({
 export function Footer() {
   return (
     <StyledFooter>
-      <FooterContainer maxWidth="lg">
-        <Box sx={{ flex: 1 }}>
+      <FooterContainer
+        maxWidth="lg"
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
             © {new Date().getFullYear()} SG Custom Exteriors
           </Typography>
         </Box>
 
-        <Box sx={{ flex: 1, textAlign: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
             Serving Cowichan Valley
           </Typography>
         </Box>
 
-        <Box sx={{ flex: 1, textAlign: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <IconLink
             href="mailto:shaungersthofer@gmail.com"
             target="_blank"
