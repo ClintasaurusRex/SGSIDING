@@ -50,14 +50,64 @@
 
 /* Small phones */
 @media screen and (max-width: 375px) {
+  .carousel-items {
+    margin-top: 80px;
+  }
+
+  .main-container {
+    margin-top: 80px;
+    gap: 1.5rem;
+    padding: 0 0.75rem;
+  }
+
   .text-content {
-    width: 95%;
+    width: 100%;
     padding: 1rem;
     font-size: 0.875rem;
+    gap: 1rem;
+    border-radius: 8px;
   }
+
+  .carousel-items img {
+    height: 16em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .service-contact {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .service-contact button {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 480px) {
+  .carousel-items {
+    margin-top: 90px;
+  }
+
+  .main-container {
+    margin-top: 90px;
+    gap: 1.75rem;
+    padding: 0 1rem;
+  }
+
+  .text-content {
+    width: 100%;
+    padding: 1.1rem;
+    font-size: 0.9rem;
+    gap: 1.2rem;
+  }
+
   .carousel-items img {
     height: 18em;
-    width: 26em;
+    width: 100%;
     object-fit: cover;
   }
 }
@@ -107,7 +157,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: url('/style/dark-wood-1920x1080.png') repeat;
+  background: url("/style/dark-wood-1920x1080.png") repeat;
   background-position: center;
 }
 
@@ -132,11 +182,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,5 +270,31 @@
 
   .hero-text {
     font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices (375px and below) */
+@media screen and (max-width: 375px) {
+  .hero-section {
+    height: 100vh;
+  }
+
+  .hero-content {
+    padding: 0.875rem;
+    border-radius: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hero-overlay {
+    padding: 0.75rem;
   }
 }

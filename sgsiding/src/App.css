@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: url('/style/dark-wood-1920x1080.png') repeat;
+  background: url("/style/dark-wood-1920x1080.png") repeat;
   background-position: center;
   overflow-x: hidden;
 }
@@ -13,12 +13,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.5px;
-  background: url('/style/dark-wood-1920x1080.png') repeat;
+  background: url("/style/dark-wood-1920x1080.png") repeat;
   background-position: center;
   background-attachment: fixed;
 }
@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: url('/style/dark-wood-1920x1080.png') repeat;
+  background: url("/style/dark-wood-1920x1080.png") repeat;
   background-position: center;
   background-attachment: fixed;
 }
@@ -41,7 +41,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: url('/style/dark-wood-1920x1080.png') repeat;
+  background: url("/style/dark-wood-1920x1080.png") repeat;
   background-position: center;
 }
 
@@ -53,27 +53,94 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url('/style/dark-wood-1920x1080.png') repeat;
+  background: url("/style/dark-wood-1920x1080.png") repeat;
   background-position: center;
 }
 
+/* Mobile responsiveness improvements */
 @media screen and (max-width: 768px) {
   #root {
     font-size: 16px;
   }
 
   .section {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
+  }
+
+  /* Improve touch targets for all interactive elements */
+  button,
+  a,
+  input[type="submit"],
+  input[type="button"],
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
 @media screen and (max-width: 480px) {
   #root {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .section {
     padding: 2rem 1rem;
+  }
+
+  /* Optimize spacing for smaller screens */
+  .py-6 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .px-6 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .gap-4 {
+    gap: 0.75rem;
+  }
+}
+
+/* Small mobile devices (375px and below) */
+@media screen and (max-width: 375px) {
+  #root {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 1.5rem 0.75rem;
+    min-height: calc(100vh - 60px); /* Account for smaller navbar on mobile */
+  }
+
+  /* Further optimize spacing for very small screens */
+  .py-6 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .px-6 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .gap-4 {
+    gap: 0.625rem;
+  }
+
+  /* Ensure text readability */
+  p,
+  li,
+  span {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Ensure proper image display */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -86,4 +153,20 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Additional helper classes for responsive layouts */
+.flex-responsive {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-responsive {
+    flex-direction: column;
+  }
+
+  .flex-responsive.reverse {
+    flex-direction: column-reverse;
+  }
 }

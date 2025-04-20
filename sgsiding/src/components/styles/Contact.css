@@ -1,4 +1,130 @@
-/* Add these styles to your existing Contact.css file */
-/* .email-rev {
+/* Contact form styles with improved mobile responsiveness */
+.contact-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form-field {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  min-height: 44px; /* Ensure good touch targets */
+}
+
+.contact-form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form-button {
+  min-height: 44px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  min-height: 44px; /* Ensure good touch targets */
+}
+
+.contact-info-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.email-rev {
   cursor: pointer;
-} */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-info {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-field {
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-form-input,
+  .contact-form-textarea {
+    padding: 0.6rem;
+  }
+
+  .contact-form-button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+  }
+
+  .contact-info-item {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 375px) {
+  .contact-form-field {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form-label {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-form-input,
+  .contact-form-textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form-textarea {
+    min-height: 120px;
+  }
+
+  .contact-form-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-info {
+    margin-top: 1.25rem;
+  }
+
+  .contact-info-item {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-info-icon {
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+  }
+}

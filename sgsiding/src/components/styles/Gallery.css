@@ -111,8 +111,8 @@
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 44px; /* Ensure adequate touch target size */
+  height: 44px; /* Ensure adequate touch target size */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +128,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .gallery-container {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
 
   .gallery-title {
@@ -138,6 +138,81 @@
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
+  }
+
+  .modal-close {
+    top: -1.5rem;
+    right: -1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .gallery-grid {
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.875rem;
+  }
+
+  .gallery-item-overlay span {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .modal-close {
+    top: -1.25rem;
+    right: -0.5rem;
+  }
+}
+
+/* Small mobile devices (375px and below) */
+@media (max-width: 375px) {
+  .gallery-container {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .gallery-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .gallery-grid {
+    margin-top: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .gallery-item {
+    aspect-ratio: 3/2; /* Slightly less tall for better viewing on small screens */
+  }
+
+  .gallery-item-overlay span {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.7rem;
+    border-width: 1px;
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .modal-close {
+    top: -1rem;
+    right: -0.25rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -159,10 +234,35 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  min-height: 44px; /* Ensure good touch target */
 }
 
 .view-more-button:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+  .view-more-container {
+    margin-top: 2rem;
+  }
+
+  .view-more-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .view-more-container {
+    margin-top: 1.5rem;
+  }
+
+  .view-more-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    width: 100%; /* Full width on very small screens */
+    max-width: 250px;
+  }
 }
