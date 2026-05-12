@@ -1,72 +1,77 @@
-export const sidingInstall = {
-  title: "Siding and Soffit Installation",
-  description: `We provide professional installation of siding and soffit materials to enhance both the appearance and functionality of your home. Our expert team specializes in a variety of materials and techniques to deliver exceptional results tailored to your needs.`,
-  services: [
-    {
-      title: "Soffit Installation",
-      description:
-        "Properly installed soffits not only improve ventilation and prevent moisture buildup but also add a clean, finished look to your roofline. We offer durable and stylish soffit options to protect your home and complement its design.",
-    },
-    {
-      title: "Wood Siding",
-      description:
-        "Achieve a timeless, natural look with expertly installed wood siding that offers charm and durability when properly maintained.",
-    },
-    {
-      title: "Fiber Cement Siding",
-      description:
-        "Enjoy the strength and longevity of fiber cement siding, known for its resistance to fire, pests, and harsh weather, installed with precision for lasting performance.",
-    },
-    {
-      title: "Vinyl Siding",
-      description:
-        "A versatile and low-maintenance option, we provide seamless vinyl siding installations that offer durability and aesthetic appeal.",
-    },
-  ],
-  conclusion:
-    "Our focus is on high-quality craftsmanship, energy efficiency, and customer satisfaction. Whether you're upgrading, renovating, or starting a new build, our team ensures your siding and soffit work together to protect and enhance your home for years to come.",
+export const serviceSectionIntro = {
+  eyebrow: "Custom Exterior Services",
+  title: "Built for coastal homes, finished with care.",
+  description:
+    "SG Siding focuses on premium exterior packages for Vancouver Island homes, combining durable materials, clean installation, and a sharp finished look that suits custom builds and thoughtful renovations.",
 };
 
-export const sidingRepair = {
-  title: "Siding Repair",
-  description: `We provide expert repair services to restore the integrity, functionality, and appearance of your siding. Whether your siding has been damaged by storms, pests, or general wear and tear, our skilled professionals can identify the issue and deliver effective solutions that extend the life of your siding and maintain your home's protection.`,
-  services: [
-    {
-      title: "Damage Assessment",
-      description:
-        "We thoroughly inspect your siding to determine the extent of the damage and identify any underlying issues, such as moisture penetration or structural concerns.",
-    },
+export const serviceCards = [
+  {
+    title: "Premium Siding Installation",
+    description:
+      "Full siding packages planned for clean reveals, durable weather performance, and a finished look that feels considered from every angle.",
+    details: [
+      "Careful layout and trim transitions for a tailored result.",
+      "Material selections chosen for coastal weather and long-term durability.",
+      "Installation approached with custom-home standards and clean workmanship.",
+    ],
+  },
+  {
+    title: "Custom Soffit Details",
+    description:
+      "Soffit work that sharpens rooflines, supports ventilation, and completes the exterior package without looking like an afterthought.",
+    details: [
+      "Attention to lines, edges, and finish details around eaves and overhangs.",
+      "Built to complement siding, trim, and the overall exterior palette.",
+      "A clean, durable finish suited to modern and traditional Island homes.",
+    ],
+  },
+  {
+    title: "Hardie and Fiber Cement Installation",
+    description:
+      "Experienced installation of fiber cement systems for homeowners and builders who want a refined, resilient exterior finish.",
+    details: [
+      "Strong product fit for wet coastal conditions and long-term performance.",
+      "Measured installation with crisp lines and consistent reveals.",
+      "Ideal for projects that need durability without sacrificing appearance.",
+    ],
+  },
+  {
+    title: "New Build Exterior Packages",
+    description:
+      "Exterior siding and soffit packages coordinated for new homes, custom builds, and builder-led projects that need reliable execution.",
+    details: [
+      "Sequenced cleanly with the broader build schedule and site workflow.",
+      "A practical fit for custom homes that need detail-driven exterior finishing.",
+      "Consistent execution from first elevation to final wrap-up.",
+    ],
+  },
+  {
+    title: "Custom Exterior Finishing",
+    description:
+      "A detail-first approach to the finishing work that gives an exterior its final character, depth, and polish.",
+    details: [
+      "Trim, transitions, and finishing decisions handled with visual discipline.",
+      "Focused on clean results that feel premium without looking overdone.",
+      "Designed to suit the scale, setting, and architecture of Vancouver Island homes.",
+    ],
+  },
+];
 
-    {
-      title: "Replacement of Sections",
-      description:
-        "For severely damaged areas, we carefully remove and replace specific sections of siding, ensuring a flawless match to your existing material and color.",
-    },
-    {
-      title: "Weatherproofing and Sealing",
-      description:
-        "To enhance your home's protection, we ensure all repaired areas are properly sealed and weatherproofed to resist moisture, wind, and other environmental factors.",
-    },
-  ],
-  conclusion:
-    "With a focus on quality, durability, and customer satisfaction, our siding repair services will help maintain your home's curb appeal and safeguard it from the elements. Whether you're dealing with minor wear or extensive damage, we're here to provide reliable, long-lasting repairs tailored to your needs.",
-};
+export const serviceProof = [
+  {
+    label: "Local Fit",
+    value: "Vancouver Island homes and coastal weather considerations.",
+  },
+  {
+    label: "Work Standard",
+    value: "Clean, detail-driven installation with a premium finish in mind.",
+  },
+  {
+    label: "Project Type",
+    value: "Custom homes, new builds, and thoughtful exterior upgrades.",
+  },
+];
 
-export const sidingMaintenance = {
-  title: "Siding Maintenance",
-  description: `Keep your siding in top shape with our comprehensive maintenance and inspection services. Regular upkeep not only enhances your home's appearance but also prolongs the life of your siding, ensuring it continues to provide protection against the elements.`,
-  services: [
-    {
-      title: "Thorough Inspections",
-      description:
-        "We conduct detailed inspections to identify signs of wear, damage, or potential issues such as moisture infiltration, loose panels, or pest activity.",
-    },
-    {
-      title: "Sealing and Caulking",
-      description:
-        "To maintain weather resistance, we inspect and reseal seams, joints, and edges, ensuring your siding remains properly sealed against moisture and drafts.",
-    },
-  ],
-  conclusion:
-    "By investing in regular siding maintenance, you'll protect your home's structural integrity, maintain energy efficiency, and keep it looking its best year-round. Let us help you preserve the beauty and performance of your siding for years to come!",
-};
+export const serviceClosing =
+  "Every project is approached as a full exterior composition, with siding, soffit, trim, and finish details working together for a result that feels durable, local, and well built.";
