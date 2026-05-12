@@ -1,69 +1,29 @@
-import { Box, Container, Typography, Link } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
-
-const StyledFooter = styled("footer")({
-  marginTop: "auto",
-  backgroundColor: "#444445",
-  padding: "1rem 0",
-  borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-});
-
-const FooterContainer = styled(Container)({
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  flexWrap: "wrap",
-  gap: "1rem",
-});
-
-const IconLink = styled(Link)({
-  display: "flex",
-  alignItems: "center",
-  gap: "0.5rem",
-  color: "rgba(255, 255, 255, 0.7)",
-  textDecoration: "none",
-  transition: "all 0.3s ease",
-  "&:hover": {
-    color: "#fff",
-    transform: "translateY(-2px)",
-  },
-});
+import "../styles/Footer.css";
 
 export function Footer() {
   return (
-    <StyledFooter>
-      <FooterContainer
-        maxWidth="lg"
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
-            © {new Date().getFullYear()} SG Custom Exteriors
-          </Typography>
-        </Box>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-brand">
+          <p className="footer-mark">SG Siding</p>
+          <p className="footer-copy">
+            Premium siding, soffit, and exterior finishing for Vancouver Island homes.
+          </p>
+        </div>
 
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Typography variant="body2" color="rgba(255, 255, 255, 0.7)">
-            Serving Cowichan Valley
-          </Typography>
-        </Box>
+        <div className="footer-meta">
+          <p className="footer-location">Serving Cowichan Valley and Vancouver Island</p>
+          <a className="footer-link" href="mailto:shaungersthofer@gmail.com">
+            <EnvelopeIcon width={20} height={20} />
+            <span>Email Shaun</span>
+          </a>
+        </div>
 
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <IconLink
-            href="mailto:shaungersthofer@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <EnvelopeIcon width={24} height={24} />
-            <span>Contact Us</span>
-          </IconLink>
-        </Box>
-      </FooterContainer>
-    </StyledFooter>
+        <p className="footer-legal">
+          © {new Date().getFullYear()} SG Siding. Built for custom exterior work.
+        </p>
+      </div>
+    </footer>
   );
 }
