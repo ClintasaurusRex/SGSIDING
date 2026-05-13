@@ -18,7 +18,7 @@ function getShowcaseLabel(index) {
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [showAll, setShowAll] = useState(false);
-  const initialImages = 6;
+  const initialImages = 5;
 
   const displayedImages = useMemo(
     () => (showAll ? slides : slides.slice(0, initialImages)),
@@ -70,8 +70,8 @@ export default function Gallery() {
             <img src={image.src} alt={image.alt} />
             <div className="gallery-item-overlay">
               <div className="gallery-item-copy">
-                <span className="gallery-item-kicker">Featured Project</span>
-                <strong className="gallery-item-title">{getShowcaseLabel(index)}</strong>
+                {/* <span className="gallery-item-kicker">Featured Project</span> */}
+                {/* <strong className="gallery-item-title">{getShowcaseLabel(index)}</strong> */}
                 <span className="gallery-item-action">View full image</span>
               </div>
             </div>
