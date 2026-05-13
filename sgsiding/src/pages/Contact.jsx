@@ -16,10 +16,10 @@ export default function Contact() {
         </div>
 
         <div className="contact-card">
-          <div className="contact-card-header">
+          {/* <div className="contact-card-header">
             <span className="contact-card-label">Preferred Contact</span>
             <p className="contact-card-value">shaungersthofer@gmail.com</p>
-          </div>
+          </div> */}
 
           <div className="contact-card-body">
             <p className="contact-card-note">

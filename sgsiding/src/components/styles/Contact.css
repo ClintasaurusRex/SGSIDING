@@ -88,7 +88,12 @@
 .contact-card-body {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  justify-content: center;
   gap: 1.2rem;
+}
+
+.contact-card-header + .contact-card-body {
   padding-top: 1.4rem;
 }
 
