@@ -5,7 +5,7 @@ import { slides } from "../../assets/sidingImages";
 const heroHighlights = [
   "Premium siding installation",
   "Custom soffit detailing",
-  "Fiber cement and Hardie expertise",
+  "Fiber cement and Hardy expertise",
 ];
 
 const heroCaptions = [
