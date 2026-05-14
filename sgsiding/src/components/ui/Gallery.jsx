@@ -2,19 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { slides } from "../../assets/sidingImages";
 import "../styles/Gallery.css";
 
-const showcaseLabels = [
-  "Custom siding lines",
-  "Soffit and trim details",
-  "Fiber cement exterior work",
-  "New build finishing",
-  "Coastal-ready exterior package",
-  "Featured Island project",
-];
-
-function getShowcaseLabel(index) {
-  return showcaseLabels[index % showcaseLabels.length];
-}
-
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [showAll, setShowAll] = useState(false);

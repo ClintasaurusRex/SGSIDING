@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Siding.css";
 import { slides } from "../../assets/sidingImages";
 
@@ -18,7 +18,7 @@ const heroCaptions = [
 ];
 
 export default function Siding() {
-  const heroSlides = useMemo(() => slides.slice(0, 6), []);
+  const heroSlides = slides.slice(0, 6);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
