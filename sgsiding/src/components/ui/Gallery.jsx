@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { slides } from "../../assets/sidingImages";
 import "../styles/Gallery.css";
 import { lockBodyScroll, unlockBodyScroll } from "../../utils/scrollLock";
@@ -8,10 +8,7 @@ export default function Gallery() {
   const [showAll, setShowAll] = useState(false);
   const initialImages = 5;
 
-  const displayedImages = useMemo(
-    () => (showAll ? slides : slides.slice(0, initialImages)),
-    [showAll],
-  );
+  const displayedImages = showAll ? slides : slides.slice(0, initialImages);
 
   useEffect(() => {
     let handleKeyDown;
