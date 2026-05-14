@@ -48,7 +48,7 @@ export default function Siding() {
       <div className="hero-grid">
         <div className="hero-copy">
           <p className="hero-eyebrow">Vancouver Island Exterior Specialist</p>
-          <h1 className="hero-title">High-End Custom Exterior Finishing</h1>
+          <h1 className="hero-title">SG Custom Exteriors</h1>
           <p className="hero-lead">
             Premium siding, soffit, and fiber cement installation for Vancouver Island homes and new
             builds.
