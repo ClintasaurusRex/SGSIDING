@@ -14,23 +14,22 @@ export default function Gallery() {
   );
 
   useEffect(() => {
-    if (!selectedImage) {
-      return undefined;
-    }
-
-    lockBodyScroll();
-
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         setSelectedImage(null);
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
+    if (selectedImage) {
+      lockBodyScroll();
+      window.addEventListener("keydown", handleKeyDown);
+    }
 
     return () => {
-      unlockBodyScroll();
-      window.removeEventListener("keydown", handleKeyDown);
+      if (selectedImage) {
+        unlockBodyScroll();
+        window.removeEventListener("keydown", handleKeyDown);
+      }
     };
   }, [selectedImage]);
 
