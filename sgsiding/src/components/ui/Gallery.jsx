@@ -14,20 +14,27 @@ export default function Gallery() {
   );
 
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        setSelectedImage(null);
-      }
-    };
+    let handleKeyDown;
+    let isScrollLocked = false;
 
     if (selectedImage) {
+      handleKeyDown = (event) => {
+        if (event.key === "Escape") {
+          setSelectedImage(null);
+        }
+      };
+
       lockBodyScroll();
+      isScrollLocked = true;
       window.addEventListener("keydown", handleKeyDown);
     }
 
     return () => {
-      if (selectedImage) {
+      if (isScrollLocked) {
         unlockBodyScroll();
+      }
+
+      if (handleKeyDown) {
         window.removeEventListener("keydown", handleKeyDown);
       }
     };
