@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+import { lockBodyScroll, unlockBodyScroll } from "../../utils/scrollLock";
 
 const navLinks = [
   { id: "home", label: "Home" },
@@ -23,10 +24,14 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    if (!isMenuOpen) {
+      return undefined;
+    }
+
+    lockBodyScroll();
 
     return () => {
-      document.body.style.overflow = "";
+      unlockBodyScroll();
     };
   }, [isMenuOpen]);
 

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { slides } from "../../assets/sidingImages";
 import "../styles/Gallery.css";
+import { lockBodyScroll, unlockBodyScroll } from "../../utils/scrollLock";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -14,11 +15,10 @@ export default function Gallery() {
 
   useEffect(() => {
     if (!selectedImage) {
-      document.body.style.overflow = "";
       return undefined;
     }
 
-    document.body.style.overflow = "hidden";
+    lockBodyScroll();
 
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -29,7 +29,7 @@ export default function Gallery() {
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.body.style.overflow = "";
+      unlockBodyScroll();
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [selectedImage]);
