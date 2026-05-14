@@ -2,10 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background: url("/style/dark-wood-1920x1080.png") repeat;
-  background-position: center;
-  overflow-x: hidden;
+  min-height: 100%;
+  background-color: var(--surface-base);
 }
 
 #root {
@@ -13,14 +11,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
-  color: #ffffff;
+  color: var(--text-strong);
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.5px;
-  background: url("/style/dark-wood-1920x1080.png") repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 10, 9, 0.7) 0%,
+    rgba(8, 10, 9, 0.15) 18%,
+    rgba(8, 10, 9, 0.55) 100%
+  );
 }
 
 .content {
@@ -28,33 +28,52 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: url("/style/dark-wood-1920x1080.png") repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.hero-section {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  overflow: hidden;
-  background: url("/style/dark-wood-1920x1080.png") repeat;
-  background-position: center;
 }
 
-.section {
-  min-height: 100vh;
+.content > .hero-section,
+.content > .section {
   width: 100%;
-  padding: 4rem 2rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.content > .hero-section {
+  min-height: 100vh;
+}
+
+.content > .section {
+  min-height: 100vh;
+  padding: clamp(4.5rem, 8vw, 7rem) clamp(1.25rem, 4vw, 3rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("/style/dark-wood-1920x1080.png") repeat;
-  background-position: center;
+  border-top: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, rgba(12, 15, 13, 0.9) 0%, rgba(17, 22, 19, 0.72) 100%);
+}
+
+.content > .section:nth-of-type(even) {
+  background: linear-gradient(180deg, rgba(18, 30, 24, 0.88) 0%, rgba(12, 16, 14, 0.96) 100%);
+}
+
+.content > .section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgba(165, 106, 69, 0.08), transparent 22%),
+    radial-gradient(circle at left center, rgba(47, 67, 57, 0.12), transparent 24%);
+}
+
+.content > .section > h2 {
+  width: min(1200px, 100%);
+  margin: 0 auto clamp(1.75rem, 4vw, 3rem);
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  letter-spacing: 0.04em;
+  color: var(--text-strong);
 }
 
 /* Mobile responsiveness improvements */
@@ -63,8 +82,13 @@ body {
     font-size: 16px;
   }
 
-  .section {
-    padding: 3rem 1.5rem;
+  .content > .section {
+    min-height: auto;
+    padding: clamp(4rem, 10vw, 5rem) 1.5rem;
+  }
+
+  .content > .section > h2 {
+    margin-bottom: 1.75rem;
   }
 
   /* Improve touch targets for all interactive elements */
@@ -83,8 +107,8 @@ body {
     font-size: 15px;
   }
 
-  .section {
-    padding: 2rem 1rem;
+  .content > .section {
+    padding: 3.5rem 1rem;
   }
 
   /* Optimize spacing for smaller screens */
@@ -109,7 +133,7 @@ body {
     font-size: 14px;
   }
 
-  .section {
+  .content > .section {
     padding: 1.5rem 0.75rem;
     min-height: calc(100vh - 60px); /* Account for smaller navbar on mobile */
   }
@@ -145,7 +169,7 @@ body {
 }
 
 p {
-  color: rgb(245, 242, 242);
+  color: var(--text-strong);
 }
 
 #contact {
